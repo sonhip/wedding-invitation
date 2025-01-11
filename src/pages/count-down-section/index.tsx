@@ -45,13 +45,27 @@ const CountDownSection: React.FC = () => {
   // Định nghĩa thời gian cho ngày cưới
   const weddingDate = new Date("2025-05-01T00:00:00").getTime(); // Thay đổi ngày cưới tại đây
 
+  // GSAP hover animations for buttons
+  useEffect(() => {
+    gsap.utils.toArray(".btn").forEach((btn) => {
+      const tl = gsap.timeline({ paused: true });
+      tl.to(btn as HTMLElement, {
+        scale: 1.1,
+        duration: 0.2,
+        ease: "power1.out",
+      });
+      (btn as HTMLElement).addEventListener("mouseenter", () => tl.play());
+      (btn as HTMLElement).addEventListener("mouseleave", () => tl.reverse());
+    });
+  }, []);
+
   return (
-    <section className="bg-wedding-light py-16 px-6">
+    <section className="bg-wedding-light py-16 px-6 min-h-96">
       <div className="max-w-6xl mx-auto text-center">
         {/* Countdown Title */}
         <div className="countdown-title">
           <h2 className="text-wedding-deep text-3xl md:text-4xl font-bold">
-            Countdown to Our Wedding
+            Đếm ngược đến ngày cưới cùng chúng mình
           </h2>
         </div>
 
@@ -76,25 +90,25 @@ const CountDownSection: React.FC = () => {
                     <span className="block text-4xl md:text-5xl font-bold text-wedding-deep">
                       {days}
                     </span>
-                    <span className="text-lg text-wedding-deep">Days</span>
+                    <span className="text-lg text-wedding-deep">Ngày</span>
                   </div>
                   <div className="countdown-item">
                     <span className="block text-4xl md:text-5xl font-bold text-wedding-deep">
                       {hours}
                     </span>
-                    <span className="text-lg text-wedding-deep">Hours</span>
+                    <span className="text-lg text-wedding-deep">Giờ</span>
                   </div>
                   <div className="countdown-item">
                     <span className="block text-4xl md:text-5xl font-bold text-wedding-deep">
                       {minutes}
                     </span>
-                    <span className="text-lg text-wedding-deep">Minutes</span>
+                    <span className="text-lg text-wedding-deep">Phút</span>
                   </div>
                   <div className="countdown-item">
                     <span className="block text-4xl md:text-5xl font-bold text-wedding-deep">
                       {seconds}
                     </span>
-                    <span className="text-lg text-wedding-deep">Seconds</span>
+                    <span className="text-lg text-wedding-deep">Giây</span>
                   </div>
                 </div>
               </div>
@@ -103,18 +117,18 @@ const CountDownSection: React.FC = () => {
         </div>
 
         {/* Buttons */}
-        <div className="mt-8">
+        <div className="mt-8 space-x-8">
           <button
-            className="bg-wedding-deep text-white py-2 px-8 rounded-lg mr-4 hover:bg-wedding-light transition-colors"
+            className="btn bg-wedding-deep text-wedding-light py-2 px-8 rounded-lg hover:bg-wedding-deep hover:text-white transition-colors"
             onClick={() => alert("Send Wedding Wishes!")}
           >
-            Send Wedding Wishes
+            Gửi lời chúc qua hộp cưới
           </button>
           <button
-            className="bg-wedding-light text-wedding-deep py-2 px-8 rounded-lg hover:bg-wedding-deep hover:text-white transition-colors"
+            className="btn bg-wedding-deep text-wedding-light py-2 px-8 rounded-lg hover:bg-wedding-deep hover:text-white transition-colors"
             onClick={() => alert("RSVP for Wedding!")}
           >
-            RSVP
+            Xác nhận tham gia
           </button>
         </div>
       </div>

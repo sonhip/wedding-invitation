@@ -139,21 +139,21 @@ const EventDetailsSection: React.FC = () => {
             >
               Tiệc nhà gái được tổ chức vào
             </h3>
-            <p className="text-wedding-pink text-lg">Ngày: 07/01/2025</p>
-            <p className="text-wedding-pink text-lg">Giờ: 17:00</p>
-            <p className="text-wedding-pink text-lg">
+            <p className="text-wedding-light text-lg">Ngày: 07/01/2025</p>
+            <p className="text-wedding-light text-lg">Giờ: 17:00</p>
+            <p className="text-wedding-light text-lg">
               Địa điểm: Nhà văn hoá Phường Sài Đồng, Phường Sài Đồng, Quận Long
               Biên, Hà Nội
             </p>
             <div className="flex space-x-4">
               <button
-                className="btn bg-wedding-pink text-white px-6 py-2 rounded shadow-lg"
+                className="btn bg-wedding-deep text-wedding-light px-6 py-2 rounded shadow-lg"
                 onClick={() => window.open("https://maps.google.com", "_blank")}
               >
                 Hướng dẫn đi
               </button>
               <button
-                className="btn bg-wedding-pink text-white px-6 py-2 rounded shadow-lg"
+                className="btn bg-wedding-deep text-wedding-light px-6 py-2 rounded shadow-lg"
                 onClick={() =>
                   alert("Đã thêm vào lịch! (Chưa tích hợp với lịch thực tế)")
                 }
@@ -170,20 +170,20 @@ const EventDetailsSection: React.FC = () => {
             >
               Tiệc nhà trai được tổ chức vào
             </h3>
-            <p className="text-wedding-pink text-lg">Ngày: 08/01/2025</p>
-            <p className="text-wedding-pink text-lg">Giờ: 17:00</p>
-            <p className="text-wedding-pink text-lg">
+            <p className="text-wedding-light text-lg">Ngày: 08/01/2025</p>
+            <p className="text-wedding-light text-lg">Giờ: 17:00</p>
+            <p className="text-wedding-light text-lg">
               Địa điểm: Đình Gia Quất, Thượng Thanh, Long Biên, Hà Nội
             </p>
             <div className="flex space-x-4">
               <button
-                className="btn bg-wedding-pink text-white px-6 py-2 rounded shadow-lg"
+                className="btn bg-wedding-deep text-wedding-light px-6 py-2 rounded shadow-lg"
                 onClick={() => window.open("https://maps.google.com", "_blank")}
               >
                 Hướng dẫn đi
               </button>
               <button
-                className="btn bg-wedding-pink text-white px-6 py-2 rounded shadow-lg"
+                className="btn bg-wedding-deep text-wedding-light px-6 py-2 rounded shadow-lg"
                 onClick={() =>
                   alert("Đã thêm vào lịch! (Chưa tích hợp với lịch thực tế)")
                 }

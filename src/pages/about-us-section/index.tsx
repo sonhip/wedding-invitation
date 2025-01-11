@@ -63,8 +63,8 @@ const AboutUsSection: React.FC = () => {
         {stages.map((stage, index) => (
           <div
             key={index}
-            className={`love-stage grid grid-cols-1 md:grid-cols-2 gap-8 items-center ${
-              index % 2 === 1 ? "md:flex-row-reverse" : ""
+            className={`love-stage flex flex-col md:flex-row gap-8 items-center ${
+              index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
             }`}
           >
             {/* Text Content */}
@@ -78,7 +78,7 @@ const AboutUsSection: React.FC = () => {
             </div>
 
             {/* Image */}
-            <div className="mx-auto w-full max-w-md sm:max-w-lg md:max-w-xl aspect-w-4 aspect-h-3">
+            <div className="mx-auto w-full max-w-md sm:max-w-lg md:max-w-xl flex-shrink-0">
               <img
                 src={stage.image}
                 alt={stage.title}

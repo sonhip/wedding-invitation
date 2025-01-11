@@ -5,6 +5,7 @@ import FooterSection from "./pages/footer-section";
 import GallerySection from "./pages/gallery-section";
 import HeroSection from "./pages/hero-section";
 import PeopleSection from "./pages/people-section";
+import ThankYouSection from "./pages/thank-you-section";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <EventDetailsSection />
       <GallerySection />
       <CountDownSection />
+      <ThankYouSection />
       <FooterSection />
     </div>
   );
