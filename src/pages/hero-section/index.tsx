@@ -77,20 +77,6 @@ const HeroSection = () => {
     );
   }, []);
 
-  // GSAP hover animations for buttons
-  useEffect(() => {
-    gsap.utils.toArray(".btn").forEach((btn) => {
-      const tl = gsap.timeline({ paused: true });
-      tl.to(btn as HTMLElement, {
-        scale: 1.1,
-        duration: 0.2,
-        ease: "power1.out",
-      });
-      (btn as HTMLElement).addEventListener("mouseenter", () => tl.play());
-      (btn as HTMLElement).addEventListener("mouseleave", () => tl.reverse());
-    });
-  }, []);
-
   return (
     <section className="relative bg-wedding-light min-h-screen flex items-center justify-center text-center p-6 overflow-hidden">
       {/* Image Slider with repeat if needed */}

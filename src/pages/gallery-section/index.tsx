@@ -105,7 +105,7 @@ const GallerySection: React.FC = () => {
         {/* Gallery Title */}
         <div>
           <h2 className="gallery-title text-wedding-deep text-3xl md:text-4xl font-bold">
-            Our Journey So Far
+            Album Hình Cưới
           </h2>
         </div>
 

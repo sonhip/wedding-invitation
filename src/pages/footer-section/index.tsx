@@ -6,6 +6,30 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 gsap.registerPlugin(ScrollTrigger);
 
 const FooterSection: React.FC = () => {
+  useEffect(() => {
+    // ScrollTrigger để hiển thị nút scroll-to-top khi người dùng cuộn đến footer
+    const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+    ScrollTrigger.create({
+      trigger: ".footer-section", // Khi cuộn đến footer
+      start: "top bottom", // Bắt đầu khi footer vào tầm nhìn
+      end: "bottom top", // Kết thúc khi footer ra khỏi tầm nhìn
+      onEnter: () => {
+        // Khi footer xuất hiện, nút scroll-to-top sẽ hiển thị
+        scrollToTopButton?.classList.remove("hidden");
+      },
+      onLeaveBack: () => {
+        // Khi người dùng cuộn lên, ẩn nút
+        scrollToTopButton?.classList.add("hidden");
+      },
+    });
+  }, []);
+
+  const handleScrollToTop = () => {
+    // Cuộn trang lên đầu
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <section className="footer-section bg-wedding-deep text-wedding-light py-8">
       <div className="container mx-auto text-center">
@@ -43,6 +67,15 @@ const FooterSection: React.FC = () => {
             © 2025 [Thu Hà] & [Trường Sinh] - All Rights Reserved
           </p>
         </div>
+
+        {/* Scroll to Top Button */}
+        <button
+          id="scrollToTopButton"
+          onClick={handleScrollToTop}
+          className="fixed bottom-8 right-8 bg-wedding-light text-wedding-purple p-4 rounded-full shadow-lg transition-all duration-300 hidden"
+        >
+          ↑
+        </button>
       </div>
     </section>
   );

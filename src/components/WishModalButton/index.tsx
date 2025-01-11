@@ -23,7 +23,7 @@ const WishModalButton: React.FC = () => {
         title: "Lỗi!",
         description: "Vui lòng điền đầy đủ thông tin!",
         duration: 3000, // Thời gian hiển thị của toast
-        className: "bg-orange-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho lỗi
+        className: "bg-red-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho lỗi
       });
       return;
     }
@@ -43,10 +43,8 @@ const WishModalButton: React.FC = () => {
 
   return (
     <Dialog>
-      <DialogTrigger>
-        <button className="btn mt-8 px-6 py-3 bg-wedding-deep text-wedding-light text-lg md:text-xl font-semibold rounded-lg transition">
-          Gửi Lời Chúc
-        </button>
+      <DialogTrigger className="btn mt-8 px-6 py-3 bg-wedding-deep text-wedding-light text-lg md:text-xl font-semibold rounded-lg transition">
+        Gửi Lời Chúc
       </DialogTrigger>
 
       <DialogContent className="bg-white p-6 rounded-lg shadow-xl max-w-md mx-auto">
@@ -70,7 +68,7 @@ const WishModalButton: React.FC = () => {
             <input
               type="text"
               id="name"
-              className="mt-2 p-3 w-full border rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep"
+              className="mt-2 p-3 w-full border border-wedding-purple rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep"
               placeholder="Nhập tên của bạn"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -86,7 +84,7 @@ const WishModalButton: React.FC = () => {
             </label>
             <textarea
               id="message"
-              className="mt-2 p-3 w-full h-32 border bg-transparent rounded-lg focus:ring-2 focus:ring-wedding-deep"
+              className="mt-2 p-3 w-full h-32 border border-wedding-purple bg-transparent rounded-lg focus:ring-2 focus:ring-wedding-deep"
               placeholder="Nhập lời chúc của bạn"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
@@ -94,13 +92,11 @@ const WishModalButton: React.FC = () => {
           </div>
 
           <div className="mt-6 flex justify-end">
-            <DialogTrigger asChild>
-              <button
-                type="submit"
-                className="px-6 py-2 bg-wedding-deep text-wedding-light text-lg font-semibold rounded-lg"
-              >
-                Gửi Lời Chúc
-              </button>
+            <DialogTrigger
+              type="submit"
+              className="px-6 py-2 bg-wedding-deep text-wedding-light text-lg font-semibold rounded-lg"
+            >
+              Gửi Lời Chúc
             </DialogTrigger>
           </div>
         </form>

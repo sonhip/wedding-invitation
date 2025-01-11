@@ -24,7 +24,7 @@ const ConfirmModalButton: React.FC = () => {
         title: "Lỗi!",
         description: "Vui lòng điền đầy đủ thông tin!",
         duration: 3000, // Thời gian hiển thị của toast
-        className: "bg-orange-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho lỗi
+        className: "bg-red-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho lỗi
       });
       return;
     }
@@ -44,10 +44,8 @@ const ConfirmModalButton: React.FC = () => {
 
   return (
     <Dialog>
-      <DialogTrigger>
-        <button className="btn mt-8 px-6 py-3 bg-wedding-deep text-wedding-light text-lg md:text-xl font-semibold rounded-lg transition">
-          Xác nhận tham gia
-        </button>
+      <DialogTrigger className="btn mt-8 px-6 py-3 bg-wedding-deep text-wedding-light text-lg md:text-xl font-semibold rounded-lg transition">
+        Xác nhận tham gia
       </DialogTrigger>
 
       <DialogContent className="bg-white p-6 rounded-lg shadow-xl max-w-md mx-auto">
@@ -71,7 +69,7 @@ const ConfirmModalButton: React.FC = () => {
             <input
               type="text"
               id="name"
-              className="mt-2 p-3 w-full border rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep"
+              className="mt-2 p-3 w-full border border-wedding-purple rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep"
               placeholder="Nhập tên của bạn"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -88,7 +86,7 @@ const ConfirmModalButton: React.FC = () => {
             <input
               type="text"
               id="phone"
-              className="mt-2 p-3 w-full border rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep"
+              className="mt-2 p-3 w-full border border-wedding-purple rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep"
               placeholder="Nhập số điện thoại của bạn"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
@@ -104,7 +102,7 @@ const ConfirmModalButton: React.FC = () => {
             </label>
             <textarea
               id="note"
-              className="mt-2 p-3 w-full h-32 border bg-transparent rounded-lg focus:ring-2 focus:ring-wedding-deep"
+              className="mt-2 p-3 w-full h-32 border border-wedding-purple bg-transparent rounded-lg focus:ring-2 focus:ring-wedding-deep"
               placeholder="Nhập ghi chú của bạn"
               value={note}
               onChange={(e) => setNote(e.target.value)}

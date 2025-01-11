@@ -120,7 +120,7 @@ const CountDownSection: React.FC = () => {
         </div>
 
         {/* Buttons */}
-        <div className="mt-8 space-x-8">
+        <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4 sm:gap-12 px-4">
           <SendViaBoxModal />
           <ConfirmModalButton />
         </div>

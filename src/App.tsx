@@ -1,3 +1,4 @@
+import MusicToggleIcon from "./components/MusicToggleIcon";
 import { Toaster } from "./components/ui/toaster";
 import AboutUsSection from "./pages/about-us-section";
 import CountDownSection from "./pages/count-down-section";
@@ -20,6 +21,9 @@ function App() {
       <ThankYouSection />
       <FooterSection />
       <Toaster />
+
+      {/* Đặt MusicToggleIcon ở cuối cùng */}
+      <MusicToggleIcon />
     </div>
   );
 }

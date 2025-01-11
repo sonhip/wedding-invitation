@@ -12,10 +12,8 @@ import imageQrGroom from "../../assets/others/qr-groom.webp";
 const SendViaBoxModal: React.FC = () => {
   return (
     <Dialog>
-      <DialogTrigger>
-        <button className="btn mt-8 px-6 py-3 bg-wedding-deep text-wedding-light text-lg md:text-xl font-semibold rounded-lg transition">
-          Gửi lời chúc qua hộp cưới
-        </button>
+      <DialogTrigger className="btn mt-8 px-6 py-3 bg-wedding-deep text-wedding-light text-lg md:text-xl font-semibold rounded-lg transition">
+        Gửi lời chúc qua hộp cưới
       </DialogTrigger>
 
       <DialogContent className="bg-white p-6 rounded-lg shadow-xl max-w-full sm:max-w-[800px] mx-auto">
