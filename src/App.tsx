@@ -1,3 +1,4 @@
+import FallingSnows from "./components/FallingSnows";
 import MusicToggleIcon from "./components/MusicToggleIcon";
 import { Toaster } from "./components/ui/toaster";
 import AboutUsSection from "./pages/about-us-section";
@@ -12,18 +13,20 @@ import ThankYouSection from "./pages/thank-you-section";
 function App() {
   return (
     <div className="min-h-screen overflow-hidden">
-      <HeroSection />
-      <PeopleSection />
-      <AboutUsSection />
-      <EventDetailsSection />
-      <GallerySection />
-      <CountDownSection />
-      <ThankYouSection />
-      <FooterSection />
-      <Toaster />
+      <FallingSnows>
+        <HeroSection />
+        <PeopleSection />
+        <AboutUsSection />
+        <EventDetailsSection />
+        <GallerySection />
+        <CountDownSection />
+        <ThankYouSection />
+        <FooterSection />
+        <Toaster />
 
-      {/* Đặt MusicToggleIcon ở cuối cùng */}
-      <MusicToggleIcon />
+        {/* Đặt MusicToggleIcon ở cuối cùng */}
+        <MusicToggleIcon />
+      </FallingSnows>
     </div>
   );
 }
