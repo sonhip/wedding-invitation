@@ -23,7 +23,7 @@ const SendViaBoxModal: React.FC = () => {
           </DialogTitle>
         </DialogHeader>
 
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 overflow-auto max-h-[550px]">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 overflow-auto max-h-[450px]">
           {/* Box Cô Dâu */}
           <div className="border p-4 rounded-lg shadow-md">
             <h3 className="text-center text-xl font-semibold text-wedding-deep mb-4">

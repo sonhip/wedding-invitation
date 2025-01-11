@@ -21,6 +21,7 @@ import image6 from "../../assets/gallery-images/6.webp";
 import image7 from "../../assets/gallery-images/7.webp";
 import image8 from "../../assets/gallery-images/8.webp";
 import image9 from "../../assets/gallery-images/9.webp";
+export const WEDDING_DATE = "15/01/2025";
 
 const images = [
   image1,
@@ -102,7 +103,7 @@ const HeroSection = () => {
           style={{ textShadow: "0 4px 6px rgba(0, 0, 0, 0.3)" }}
           className="hero-subtitle text-wedding-deep text-2xl md:text-3xl lg:text-4xl mt-8 leading-relaxed"
         >
-          08 tháng 01 2025
+          {WEDDING_DATE}
         </p>
 
         <WishModalButton />

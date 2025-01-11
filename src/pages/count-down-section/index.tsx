@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ConfirmModalButton from "@/components/ConfirmModal";
 import SendViaBoxModal from "@/components/SendViaBoxModal";
-const DAYS_LEFT = 3;
+import { WEDDING_DATE } from "../hero-section";
 
 // Đăng ký plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -46,7 +46,9 @@ const CountDownSection: React.FC = () => {
   }, []);
 
   // Định nghĩa thời gian cho ngày cưới
-  const weddingDate = new Date().getTime() + DAYS_LEFT * 24 * 60 * 60 * 1000;
+  // Chuyển đổi WEDDING_DATE từ "dd/MM/yyyy" sang Date object
+  const [day, month, year] = WEDDING_DATE.split("/");
+  const timeLeft = new Date(`${year}-${month}-${day}T00:00:00`);
 
   // GSAP hover animations for buttons
   useEffect(() => {
@@ -75,7 +77,7 @@ const CountDownSection: React.FC = () => {
         {/* Countdown Timer */}
         <div className="countdown-timer mt-8">
           <Countdown
-            date={weddingDate}
+            date={timeLeft}
             renderer={({
               days,
               hours,
