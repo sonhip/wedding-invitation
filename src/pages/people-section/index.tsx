@@ -40,8 +40,8 @@ const PeopleSection = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-wedding-light text-center min-w-[450px]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-16 bg-wedding-light text-center min-h-[450px]">
+      <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Bride Section */}
           <div className="flex flex-col items-center">
