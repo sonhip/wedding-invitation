@@ -1,6 +1,6 @@
+import WishModalButton from "@/components/WishModalButton";
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
-import WishModalButton from "@/components/WishModalButton";
 import image1 from "../../assets/gallery-images/1.webp";
 import image10 from "../../assets/gallery-images/10.webp";
 import image11 from "../../assets/gallery-images/11.webp";

@@ -1,15 +1,27 @@
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import brideImage from "../../assets/others/bride.webp";
 import groomImage from "../../assets/others/groom.webp";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const PeopleSection = () => {
   useEffect(() => {
-    // GSAP Animation
+    // GSAP Animation with ScrollTrigger
     gsap.fromTo(
       ".people-title",
       { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, delay: 0.3 }
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        delay: 0.3,
+        scrollTrigger: {
+          trigger: ".people-title",
+          start: "top 80%",
+        },
+      }
     );
 
     gsap.fromTo(
@@ -22,6 +34,10 @@ const PeopleSection = () => {
         stagger: 0.3,
         ease: "easeInOut",
         delay: 0.5,
+        scrollTrigger: {
+          trigger: ".person-image",
+          start: "top 80%",
+        },
       }
     );
 
@@ -35,12 +51,16 @@ const PeopleSection = () => {
         stagger: 0.3,
         ease: "easeInOut",
         delay: 0.7,
+        scrollTrigger: {
+          trigger: ".person-info",
+          start: "top 80%",
+        },
       }
     );
   }, []);
 
   return (
-    <section className="py-16 bg-wedding-light text-center min-h-[450px]">
+    <section className="py-16 bg-wedding-light text-center">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Bride Section */}
