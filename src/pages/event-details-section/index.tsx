@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import image1 from "../../assets/others/1.webp";
+import image2 from "../../assets/others/2.webp";
+import image3 from "../../assets/others/3.webp";
+import image4 from "../../assets/others/4.webp";
+import image5 from "../../assets/others/5.webp";
+import image6 from "../../assets/others/6.webp";
+
+const images = [image1, image2, image3, image4, image5, image6];
 
 // Đăng ký plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -199,12 +207,3 @@ const EventDetailsSection: React.FC = () => {
 };
 
 export default EventDetailsSection;
-
-const images = [
-  "https://thiepcuoionline.huythanhjewelry.vn/storage/1EGooIyBS2.webp",
-  "https://thiepcuoionline.huythanhjewelry.vn/storage/H8aLV4B85W.webp",
-  "https://thiepcuoionline.huythanhjewelry.vn/storage/mkYisuccxM.webp",
-  "https://thiepcuoionline.huythanhjewelry.vn/storage/pp0qCWIU7H.webp",
-  "https://thiepcuoionline.huythanhjewelry.vn/storage/jkLnqOgzKT.webp",
-  // Thêm các ảnh khác vào đây
-];

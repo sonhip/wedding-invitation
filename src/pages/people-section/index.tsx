@@ -1,5 +1,7 @@
 import { gsap } from "gsap";
 import { useEffect } from "react";
+import brideImage from "../../assets/others/bride.webp";
+import groomImage from "../../assets/others/groom.webp";
 
 const PeopleSection = () => {
   useEffect(() => {
@@ -44,7 +46,7 @@ const PeopleSection = () => {
           {/* Bride Section */}
           <div className="flex flex-col items-center">
             <img
-              src="https://thiepcuoionline.huythanhjewelry.vn/storage/ww6AwuBXPc.webp"
+              src={brideImage}
               alt="Cô Dâu"
               className="person-image w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg mb-6"
             />
@@ -59,7 +61,7 @@ const PeopleSection = () => {
           {/* Groom Section */}
           <div className="flex flex-col items-center">
             <img
-              src="https://thiepcuoionline.huythanhjewelry.vn/storage/SXg1q25HMZ.webp"
+              src={groomImage}
               alt="Chú Rể"
               className="person-image w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg mb-6"
             />
