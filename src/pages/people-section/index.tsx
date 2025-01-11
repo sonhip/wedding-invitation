@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import { useEffect } from "react";
 
 const PeopleSection = () => {
   useEffect(() => {
@@ -38,7 +38,7 @@ const PeopleSection = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-wedding-light text-center">
+    <section className="py-16 bg-wedding-light text-center min-w-[450px]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Bride Section */}

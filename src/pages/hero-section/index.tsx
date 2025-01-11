@@ -56,6 +56,20 @@ const HeroSection = () => {
     );
   }, []);
 
+  // GSAP hover animations for buttons
+  useEffect(() => {
+    gsap.utils.toArray(".btn").forEach((btn) => {
+      const tl = gsap.timeline({ paused: true });
+      tl.to(btn as HTMLElement, {
+        scale: 1.1,
+        duration: 0.2,
+        ease: "power1.out",
+      });
+      (btn as HTMLElement).addEventListener("mouseenter", () => tl.play());
+      (btn as HTMLElement).addEventListener("mouseleave", () => tl.reverse());
+    });
+  }, []);
+
   return (
     <section className="relative bg-wedding-light min-h-screen flex items-center justify-center text-center p-6 overflow-hidden">
       {/* Image Slider with repeat if needed */}
@@ -72,17 +86,20 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-4xl mx-auto">
         {/* Title */}
-        <h1 className="hero-title text-wedding-deep text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+        <h1 className="hero-title text-wedding-deep sha text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
           Trường Sinh & Thu Hà
         </h1>
 
         {/* Subtitle */}
-        <p className="hero-subtitle text-wedding-purple text-2xl md:text-3xl lg:text-4xl mt-8 leading-relaxed">
+        <p
+          style={{ textShadow: "0 4px 6px rgba(0, 0, 0, 0.3)" }}
+          className="hero-subtitle text-wedding-deep text-2xl md:text-3xl lg:text-4xl mt-8 leading-relaxed"
+        >
           08 tháng 01 2025
         </p>
 
         {/* Button */}
-        <button className="mt-8 px-6 py-3 bg-wedding-pink text-white text-lg md:text-xl font-semibold rounded-lg hover:bg-wedding-purple transition">
+        <button className="btn mt-8 px-6 py-3 bg-wedding-deep text-wedding-light text-lg md:text-xl font-semibold rounded-lg transition">
           Gửi Lời Chúc
         </button>
       </div>
