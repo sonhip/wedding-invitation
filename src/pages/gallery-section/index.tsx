@@ -6,14 +6,26 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const galleryImages = [
-  "https://placehold.co/600x400",
-  "https://placehold.co/600x400",
-  "https://placehold.co/600x400",
-  "https://placehold.co/600x400",
-  "https://placehold.co/600x400",
-  "https://placehold.co/600x400",
-  "https://placehold.co/600x400",
-  "https://placehold.co/600x400",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831846_UNO06647.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831854_UNO06454.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831856_UNO06456.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831861_UNO06430.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831862_UNO06691.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831865_UNO06571.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831888_UNO06509.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831895_UNO06861.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831898_UNO06564.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831903_UNO06555.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831906_UNO06666.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831907_UNO06487.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831916_UNO06854.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831917_UNO06650.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831917_UNO06720.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831918_UNO06699%20copy.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831926_UNO06616.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733831927_UNO06641.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733832028_UNO07070.webp",
+  "https://thiepcuoionline.huythanhjewelry.vn/storage/images/1733832297_UNO07047.webp",
 ];
 
 const GallerySection: React.FC = () => {

@@ -35,22 +35,25 @@ const AboutUsSection: React.FC = () => {
 
   const stages: Stage[] = [
     {
-      title: "The Beginning",
+      title: "Bắt đầu từ một ngày mùa xuân nào đó",
       description:
-        "Anna and John met at a friend's gathering. Their connection was instant, and the spark of friendship soon blossomed into love.",
-      image: "https://placehold.co/400x300?text=The+Beginning",
+        "Cuộc hội ngộ của hai mảnh ghép đơn lẻ. Chúng mình đã vô tình tìm thấy nhau giữa biển người bao la rộng lớn. Và dù có những xa lạ và bỡ ngỡ ban đầu, chúng mình vẫn quyết định cùng cho nhau một cơ hội để nán lại tìm hiểu người kia thêm một chút. Và câu chuyện tình này bắt đầu..",
+      image:
+        "https://thiepcuoionline.huythanhjewelry.vn/storage/yOdqnVe5fv.webp",
     },
     {
-      title: "Building Memories",
+      title: "Cột mốc đáng nhớ",
       description:
-        "Over the years, they traveled together, shared their dreams, and created countless unforgettable memories.",
-      image: "https://placehold.co/400x300?text=Building+Memories",
+        'Quyết định quan trọng. Giống như mọi bản nhạc đều sẽ có lúc thăng trầm, câu chuyện sẽ có lúc lên xuống, chúng mình đã cùng nhau trải qua những khoảnh khắc vui, buồn, giận, hờn bên nhau. Và rồi ngày đó đã đến, sau thời gian cùng nhau điều chỉnh, "mài giũa", hai mảnh ghép quyết định sẽ không xuôi theo dòng chảy của riêng mình nữa. Chúng mình quyết định dừng chân để là bến đỗ cuối cùng của nhau...',
+      image:
+        "https://thiepcuoionline.huythanhjewelry.vn/storage/H8aLV4B85W.webp",
     },
     {
-      title: "A New Chapter",
+      title: "08/01/2025 và sau nữa",
       description:
-        "Now, they embark on the next chapter of their journey, promising to love and cherish each other forever.",
-      image: "https://placehold.co/400x300?text=A+New+Chapter",
+        'Ngày chung đôi. Câu chuyện khởi đầu vào mùa xuân, nên chúng mình muốn viết nên một cái kết hạnh phúc vào mùa đông. Để mùa xuân tiếp theo, chúng mình sẽ cùng nhau viết nên một câu chuyện khác, nhưng giờ với một vai trò mới, là "Vợ", là "Chồng". Vào ngày 08/01/2025 tới này, mong bạn đến chung vui và cùng chứng kiến cái kết hạnh phúc cho câu chuyện chúng mình, và cùng nhau mở ra một hành trình mới nhé :))',
+      image:
+        "https://thiepcuoionline.huythanhjewelry.vn/storage/1EGooIyBS2.webp",
     },
   ];
 
