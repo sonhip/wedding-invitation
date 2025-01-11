@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import Countdown from "react-countdown";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ConfirmModalButton from "@/components/ConfirmModal";
+import SendViaBoxModal from "@/components/SendViaBoxModal";
 
 // Đăng ký plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -118,18 +120,8 @@ const CountDownSection: React.FC = () => {
 
         {/* Buttons */}
         <div className="mt-8 space-x-8">
-          <button
-            className="btn bg-wedding-deep text-wedding-light py-2 px-8 rounded-lg hover:bg-wedding-deep hover:text-white transition-colors"
-            onClick={() => alert("Send Wedding Wishes!")}
-          >
-            Gửi lời chúc qua hộp cưới
-          </button>
-          <button
-            className="btn bg-wedding-deep text-wedding-light py-2 px-8 rounded-lg hover:bg-wedding-deep hover:text-white transition-colors"
-            onClick={() => alert("RSVP for Wedding!")}
-          >
-            Xác nhận tham gia
-          </button>
+          <SendViaBoxModal />
+          <ConfirmModalButton />
         </div>
       </div>
     </section>
