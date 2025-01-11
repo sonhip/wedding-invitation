@@ -1,3 +1,4 @@
+import { Toaster } from "./components/ui/toaster";
 import AboutUsSection from "./pages/about-us-section";
 import CountDownSection from "./pages/count-down-section";
 import EventDetailsSection from "./pages/event-details-section";
@@ -18,6 +19,7 @@ function App() {
       <CountDownSection />
       <ThankYouSection />
       <FooterSection />
+      <Toaster />
     </div>
   );
 }
