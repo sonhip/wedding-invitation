@@ -10,7 +10,7 @@ import ThankYouSection from "./pages/thank-you-section";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       <HeroSection />
       <PeopleSection />
       <AboutUsSection />
