@@ -59,22 +59,37 @@ const RotatingBox: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setDegrees((prev) => prev - 45); // Quay tự động về phía sau mỗi 2 giây
-    }, 2000); // Cập nhật mỗi 2 giây
+    }, 5000); // Cập nhật mỗi 2 giây
 
     return () => clearInterval(interval); // Dọn dẹp khi component unmount
   }, []);
 
+  // Hàm xử lý sự kiện chạm (touch) cho mobile
   const handleTouchMove = (e: React.TouchEvent) => {
     const moveX = e.changedTouches[0].clientX;
-    if (moveX > window.innerWidth / 2) {
-      setDegrees((prev) => prev - 45); // rotate to the next image
+    const startX = e.changedTouches[0].screenX;
+    if (moveX > startX) {
+      setDegrees((prev) => prev - 45); // quay về phía sau (qua bên trái)
     } else {
-      setDegrees((prev) => prev + 45); // rotate to the previous image
+      setDegrees((prev) => prev + 45); // quay về phía trước (qua bên phải)
+    }
+  };
+
+  // Hàm xử lý cuộn chuột theo chiều ngang
+  const handleWheel = (e: React.WheelEvent) => {
+    if (e.deltaX > 0) {
+      setDegrees((prev) => prev - 45); // cuộn sang phải -> quay về phía sau
+    } else {
+      setDegrees((prev) => prev + 45); // cuộn sang trái -> quay về phía trước
     }
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[500px] sm:min-h-screen bg-black overflow-hidden">
+    <div
+      className="flex flex-col items-center justify-center min-h-[500px] sm:min-h-screen bg-black overflow-hidden"
+      onTouchMove={handleTouchMove} // Xử lý sự kiện chạm
+      onWheel={handleWheel} // Xử lý sự kiện cuộn chuột theo chiều ngang
+    >
       <div
         className="box relative w-52 h-52 sm:w-72 sm:h-72"
         style={{ transform: `perspective(1000px) rotateY(${degrees}deg)` }}

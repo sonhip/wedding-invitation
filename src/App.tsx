@@ -15,11 +15,11 @@ function App() {
   return (
     <div className="min-h-screen">
       <FallingSnows>
-        <Carousel />
         <HeroSection />
         <PeopleSection />
         <AboutUsSection />
         <EventDetailsSection />
+        <Carousel />
         {/* <GallerySection /> */}
         <CountDownSection />
         <ThankYouSection />
