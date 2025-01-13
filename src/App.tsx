@@ -1,3 +1,4 @@
+import Carousel from "./components/Carousel";
 import FallingSnows from "./components/FallingSnows";
 import MusicToggleIcon from "./components/MusicToggleIcon";
 import { Toaster } from "./components/ui/toaster";
@@ -14,11 +15,12 @@ function App() {
   return (
     <div className="min-h-screen">
       <FallingSnows>
+        <Carousel />
         <HeroSection />
         <PeopleSection />
         <AboutUsSection />
         <EventDetailsSection />
-        <GallerySection />
+        {/* <GallerySection /> */}
         <CountDownSection />
         <ThankYouSection />
         <FooterSection />
