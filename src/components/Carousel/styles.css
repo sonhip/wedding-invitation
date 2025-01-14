@@ -1,8 +1,9 @@
 .box {
   position: relative;
   transform-style: preserve-3d;
-  transition: 1.5s;
+  transition: 1s;
   transform: perspective(1000px) rotateY(0deg);
+  will-change: transform; /* Tối ưu hiệu ứng transform */
 }
 
 .box span {
@@ -15,6 +16,7 @@
   transform-style: preserve-3d;
   -webkit-box-reflect: below 0px
     linear-gradient(transparent, transparent, #0004);
+  will-change: transform; /* Tối ưu hiệu ứng transform */
 }
 
 .box span img {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./styles.css";
 import image1 from "../../assets/gallery-images/1.webp";
 import image2 from "../../assets/gallery-images/2.webp";
@@ -46,50 +46,57 @@ const galleryImages = [
 
 const RotatingBox: React.FC = () => {
   const [degrees, setDegrees] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const [translateZ, setTranslateZ] = useState(
+    window.innerWidth > 640 ? 400 : 300
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setTranslateZ(window.innerWidth > 640 ? 400 : 300);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handlePrev = () => {
     setDegrees((prev) => prev + 45);
+    resetInterval();
   };
 
   const handleNext = () => {
     setDegrees((prev) => prev - 45);
+    resetInterval();
+  };
+  // Hàm reset interval
+  const resetInterval = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current); // Xóa interval cũ
+    }
+    startAutoRotate(); // Tạo interval mới
   };
 
-  // Tạo interval tự động quay mỗi 2 giây
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDegrees((prev) => prev - 45); // Quay tự động về phía sau mỗi 2 giây
-    }, 5000); // Cập nhật mỗi 2 giây
+  // Hàm tạo interval tự động quay
+  const startAutoRotate = () => {
+    intervalRef.current = setInterval(() => {
+      setDegrees((prev) => prev - 45); // Quay về phía sau mỗi 5 giây
+    }, 5000);
+  };
 
-    return () => clearInterval(interval); // Dọn dẹp khi component unmount
+  useEffect(() => {
+    startAutoRotate(); // Bắt đầu auto rotate khi component mount
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current); // Dọn dẹp interval khi unmount
+      }
+    };
   }, []);
 
-  // Hàm xử lý sự kiện chạm (touch) cho mobile
-  const handleTouchMove = (e: React.TouchEvent) => {
-    const moveX = e.changedTouches[0].clientX;
-    const startX = e.changedTouches[0].screenX;
-    if (moveX > startX) {
-      setDegrees((prev) => prev - 45); // quay về phía sau (qua bên trái)
-    } else {
-      setDegrees((prev) => prev + 45); // quay về phía trước (qua bên phải)
-    }
-  };
-
-  // Hàm xử lý cuộn chuột theo chiều ngang
-  const handleWheel = (e: React.WheelEvent) => {
-    if (e.deltaX > 0) {
-      setDegrees((prev) => prev - 45); // cuộn sang phải -> quay về phía sau
-    } else {
-      setDegrees((prev) => prev + 45); // cuộn sang trái -> quay về phía trước
-    }
-  };
-
   return (
-    <div
-      className="flex flex-col items-center justify-center min-h-[500px] sm:min-h-screen bg-black overflow-hidden"
-      onTouchMove={handleTouchMove} // Xử lý sự kiện chạm
-      onWheel={handleWheel} // Xử lý sự kiện cuộn chuột theo chiều ngang
-    >
+    <div className="flex relative flex-col items-center justify-center min-h-[500px] sm:min-h-screen bg-wedding-light overflow-hidden">
       <div
         className="box relative w-52 h-52 sm:w-72 sm:h-72"
         style={{ transform: `perspective(1000px) rotateY(${degrees}deg)` }}
@@ -98,9 +105,9 @@ const RotatingBox: React.FC = () => {
           <span
             key={index}
             style={{
-              transform: `rotateY(calc(${index + 1} * 45deg)) translateZ(${
-                window.innerWidth > 640 ? 400 : 300
-              }px)`,
+              transform: `rotateY(calc(${
+                index + 1
+              } * 45deg)) translateZ(${translateZ}px)`,
             }}
             className="absolute w-full h-full"
           >
@@ -112,16 +119,16 @@ const RotatingBox: React.FC = () => {
           </span>
         ))}
       </div>
-      <div className="absolute bottom-10 flex space-x-4">
+      <div className="absolute bottom-1 sm:bottom-6 flex space-x-4 sm:space-x-8">
         <button
           onClick={handlePrev}
-          className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+          className="px-4 py-1 sm:px-6 sm:py-2 bg-wedding-deep text-wedding-light text-sm sm:text-lg font-semibold rounded-lg"
         >
           Prev
         </button>
         <button
           onClick={handleNext}
-          className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+          className="px-4 py-1 sm:px-6 sm:py-2 bg-wedding-deep text-wedding-light text-sm sm:text-lg font-semibold rounded-lg"
         >
           Next
         </button>
