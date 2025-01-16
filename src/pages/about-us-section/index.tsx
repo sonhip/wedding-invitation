@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import image6 from "../../assets/others/6.webp";
-import image1 from "../../assets/others/1.webp";
-import image2 from "../../assets/others/2.webp";
+import image6 from "../../assets/gallery-images/flower.jpeg";
+import image1 from "../../assets/gallery-images/hand.jpeg";
+import image2 from "../../assets/gallery-images/7.jpeg";
 
 // Đăng ký plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -47,13 +47,13 @@ const AboutUsSection: React.FC = () => {
       title: "Cột mốc đáng nhớ",
       description:
         'Quyết định quan trọng. Giống như mọi bản nhạc đều sẽ có lúc thăng trầm, câu chuyện sẽ có lúc lên xuống, chúng mình đã cùng nhau trải qua những khoảnh khắc vui, buồn, giận, hờn bên nhau. Và rồi ngày đó đã đến, sau thời gian cùng nhau điều chỉnh, "mài giũa", hai mảnh ghép quyết định sẽ không xuôi theo dòng chảy của riêng mình nữa. Chúng mình quyết định dừng chân để là bến đỗ cuối cùng của nhau...',
-      image: image2,
+      image: image1,
     },
     {
-      title: "08/01/2025 và sau nữa",
+      title: "06/02/2025 và sau nữa",
       description:
-        'Ngày chung đôi. Câu chuyện khởi đầu vào mùa xuân, nên chúng mình muốn viết nên một cái kết hạnh phúc vào mùa đông. Để mùa xuân tiếp theo, chúng mình sẽ cùng nhau viết nên một câu chuyện khác, nhưng giờ với một vai trò mới, là "Vợ", là "Chồng". Vào ngày 08/01/2025 tới này, mong bạn đến chung vui và cùng chứng kiến cái kết hạnh phúc cho câu chuyện chúng mình, và cùng nhau mở ra một hành trình mới nhé :))',
-      image: image1,
+        'Ngày chung đôi. Câu chuyện khởi đầu vào mùa xuân, nên chúng mình muốn viết nên một cái kết hạnh phúc vào mùa đông. Để mùa xuân tiếp theo, chúng mình sẽ cùng nhau viết nên một câu chuyện khác, nhưng giờ với một vai trò mới, là "Vợ", là "Chồng". Vào ngày 06/02/2025 tới này, mong bạn đến chung vui và cùng chứng kiến cái kết hạnh phúc cho câu chuyện chúng mình, và cùng nhau mở ra một hành trình mới nhé :))',
+      image: image2,
     },
   ];
 

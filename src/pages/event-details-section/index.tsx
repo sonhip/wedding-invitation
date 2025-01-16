@@ -1,14 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import image1 from "../../assets/others/1.webp";
-import image2 from "../../assets/others/2.webp";
-import image3 from "../../assets/others/3.webp";
-import image4 from "../../assets/others/4.webp";
-import image5 from "../../assets/others/5.webp";
-import image6 from "../../assets/others/6.webp";
+import image1 from "../../assets/gallery-images/1.jpeg";
+import image2 from "../../assets/gallery-images/2.jpeg";
+import image3 from "../../assets/gallery-images/3.jpeg";
+import image4 from "../../assets/gallery-images/4.jpeg";
+import image5 from "../../assets/gallery-images/5.jpeg";
+import image6 from "../../assets/gallery-images/6.jpeg";
+import image7 from "../../assets/gallery-images/7.jpeg";
 
-const images = [image1, image2, image3, image4, image5, image6];
+const images = [
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image3,
+  image6,
+];
 
 // Đăng ký plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -147,11 +158,10 @@ const EventDetailsSection: React.FC = () => {
             >
               Tiệc nhà gái được tổ chức vào
             </h3>
-            <p className="text-wedding-light text-lg">Ngày: 07/01/2025</p>
-            <p className="text-wedding-light text-lg">Giờ: 17:00</p>
+            <p className="text-wedding-light text-lg">Ngày: 06/02/2025</p>
+            <p className="text-wedding-light text-lg">Giờ: 16:00</p>
             <p className="text-wedding-light text-lg">
-              Địa điểm: Nhà văn hoá Phường Sài Đồng, Phường Sài Đồng, Quận Long
-              Biên, Hà Nội
+              Địa điểm: Thôn 1 - Xã Thuận Minh - Huyện Thọ Xuân - Thanh Hóa
             </p>
             <div className="flex space-x-4">
               <button
@@ -160,14 +170,14 @@ const EventDetailsSection: React.FC = () => {
               >
                 Hướng dẫn đi
               </button>
-              <button
+              {/* <button
                 className="btn bg-wedding-deep text-wedding-light px-6 py-2 rounded shadow-lg"
                 onClick={() =>
                   alert("Đã thêm vào lịch! (Chưa tích hợp với lịch thực tế)")
                 }
               >
                 Thêm vào lịch
-              </button>
+              </button> */}
             </div>
           </div>
 
@@ -178,10 +188,10 @@ const EventDetailsSection: React.FC = () => {
             >
               Tiệc nhà trai được tổ chức vào
             </h3>
-            <p className="text-wedding-light text-lg">Ngày: 08/01/2025</p>
-            <p className="text-wedding-light text-lg">Giờ: 17:00</p>
+            <p className="text-wedding-light text-lg">Ngày: 06/02/2025</p>
+            <p className="text-wedding-light text-lg">Giờ: 10:00</p>
             <p className="text-wedding-light text-lg">
-              Địa điểm: Đình Gia Quất, Thượng Thanh, Long Biên, Hà Nội
+              Địa điểm: Thôn 2 - Xã Tiên Trang - Huyện Quảng Xương - Thanh Hóa
             </p>
             <div className="flex space-x-4">
               <button
@@ -190,14 +200,14 @@ const EventDetailsSection: React.FC = () => {
               >
                 Hướng dẫn đi
               </button>
-              <button
+              {/* <button
                 className="btn bg-wedding-deep text-wedding-light px-6 py-2 rounded shadow-lg"
                 onClick={() =>
                   alert("Đã thêm vào lịch! (Chưa tích hợp với lịch thực tế)")
                 }
               >
                 Thêm vào lịch
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

@@ -1,49 +1,15 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import image1 from "../../assets/gallery-images/1.webp";
-import image2 from "../../assets/gallery-images/2.webp";
-import image3 from "../../assets/gallery-images/3.webp";
-import image4 from "../../assets/gallery-images/4.webp";
-import image5 from "../../assets/gallery-images/5.webp";
-import image6 from "../../assets/gallery-images/6.webp";
-import image7 from "../../assets/gallery-images/7.webp";
-import image8 from "../../assets/gallery-images/8.webp";
-import image9 from "../../assets/gallery-images/9.webp";
-import image10 from "../../assets/gallery-images/10.webp";
-import image11 from "../../assets/gallery-images/11.webp";
-import image12 from "../../assets/gallery-images/12.webp";
-import image13 from "../../assets/gallery-images/13.webp";
-import image14 from "../../assets/gallery-images/14.webp";
-import image15 from "../../assets/gallery-images/15.webp";
-import image16 from "../../assets/gallery-images/16.webp";
-import image17 from "../../assets/gallery-images/17.webp";
-import image18 from "../../assets/gallery-images/18.webp";
-import image19 from "../../assets/gallery-images/19.webp";
-import image20 from "../../assets/gallery-images/20.webp";
+import image1 from "../../assets/gallery-images/1.jpeg";
+import image2 from "../../assets/gallery-images/2.jpeg";
+import image3 from "../../assets/gallery-images/3.jpeg";
+import image4 from "../../assets/gallery-images/4.jpeg";
+import image5 from "../../assets/gallery-images/5.jpeg";
+import image6 from "../../assets/gallery-images/6.jpeg";
+import image7 from "../../assets/gallery-images/7.jpeg";
 
-const galleryImages = [
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image6,
-  image7,
-  image8,
-  image9,
-  image10,
-  image11,
-  image12,
-  image13,
-  image14,
-  image15,
-  image16,
-  image17,
-  image18,
-  image19,
-  image20,
-];
+const galleryImages = [image1, image2, image3, image4, image5, image6, image7];
 
 // Đăng ký plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);

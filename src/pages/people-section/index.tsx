@@ -1,8 +1,8 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
-import brideImage from "../../assets/others/bride.webp";
-import groomImage from "../../assets/others/groom.webp";
+import brideImage from "../../assets/gallery-images/2.jpeg";
+import groomImage from "../../assets/gallery-images/groom.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,10 +71,10 @@ const PeopleSection = () => {
               className="person-image w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg mb-6"
             />
             <h3 className="person-info text-2xl font-semibold text-wedding-deep mb-2">
-              Thu Hà
+              Thu Trang
             </h3>
             <p className="person-info text-lg text-wedding-purple">
-              Cô dâu xinh đẹp, dễ thương, thông minh và đầy nhiệt huyết.
+              Cô dâu xinh đẹp và dễ thương.
             </p>
           </div>
 
@@ -86,10 +86,10 @@ const PeopleSection = () => {
               className="person-image w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg mb-6"
             />
             <h3 className="person-info text-2xl font-semibold text-wedding-deep mb-2">
-              Trường Sinh
+              Lê Hậu
             </h3>
             <p className="person-info text-lg text-wedding-purple">
-              Chú rể điển trai, hài hước và luôn yêu thương cô dâu tận tâm.
+              Chú rể đẹp trai và hài hước.
             </p>
           </div>
         </div>

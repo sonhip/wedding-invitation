@@ -34,7 +34,7 @@ const FooterSection: React.FC = () => {
     <section className="footer-section bg-wedding-deep text-wedding-light py-8">
       <div className="container mx-auto text-center">
         {/* Social Media Icons */}
-        <div className="footer-item mb-8 flex justify-center gap-6">
+        {/* <div className="footer-item mb-8 flex justify-center gap-6">
           <a
             href="https://facebook.com"
             target="_blank"
@@ -59,12 +59,12 @@ const FooterSection: React.FC = () => {
           >
             <FaTwitter size={30} />
           </a>
-        </div>
+        </div> */}
 
         {/* Copyright Text */}
         <div className="footer-item">
           <p className="text-sm text-wedding-light">
-            © 2025 [Thu Hà] & [Trường Sinh] - All Rights Reserved
+            © 2025 [Thu Trang] & [Lê Hậu] - All Rights Reserved
           </p>
         </div>
 
