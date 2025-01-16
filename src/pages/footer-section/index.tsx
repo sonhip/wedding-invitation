@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import EarthBox from "@/components/Earth";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,6 +77,9 @@ const FooterSection: React.FC = () => {
         >
           ↑
         </button>
+        <div className="py-12 pb-20">
+          <EarthBox />
+        </div>
       </div>
     </section>
   );
