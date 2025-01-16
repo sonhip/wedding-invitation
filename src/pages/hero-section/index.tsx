@@ -1,12 +1,6 @@
 import WishModalButton from "@/components/WishModalButton";
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
-import image1 from "../../assets/gallery-images/1.jpeg";
-import image2 from "../../assets/gallery-images/2.jpeg";
-import image3 from "../../assets/gallery-images/3.jpeg";
-import image4 from "../../assets/gallery-images/4.jpeg";
-import image5 from "../../assets/gallery-images/5.jpeg";
-import image6 from "../../assets/gallery-images/6.jpeg";
 import image7 from "../../assets/gallery-images/7.jpeg";
 
 export const WEDDING_DATE = "06/02/2025";
