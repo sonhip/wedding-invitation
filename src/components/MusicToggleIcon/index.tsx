@@ -1,90 +1,76 @@
 import { useToast } from "@/hooks/use-toast";
-import React, { useState, useEffect } from "react";
-import { HiMusicNote, HiVolumeOff } from "react-icons/hi";
+import React, { useEffect, useState } from "react";
+import { HiMusicNote, HiVolumeOff } from "react-icons/hi"; // Icon của react-icons
 
 const MusicToggleIcon: React.FC = () => {
-  const [isPlaying, setIsPlaying] = useState(false); // Trạng thái nhạc
+  const [isPlaying, setIsPlaying] = useState(false); // Trạng thái nhạc (mặc định là không phát)
   const [audio] = useState(
     new Audio(
       "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/beautiful_in_white.mp3"
     )
-  ); // Tạo instance Audio
-  const [isLoaded, setIsLoaded] = useState(false); // Trạng thái nhạc đã sẵn sàng
+  ); // Đường dẫn đến file nhạc
   const { toast } = useToast();
 
-  // Xử lý toggle nhạc
+  // Hàm toggle nhạc (mở/tắt)
   const toggleMusic = () => {
-    if (!isLoaded) {
-      toast({
-        title: "Đang tải nhạc",
-        description: "Vui lòng chờ nhạc tải xong trước khi phát!",
-        className: "bg-yellow-500 text-white rounded-lg p-4 shadow-lg",
-        duration: 2000,
-      });
-      return;
-    }
-
     if (!isPlaying) {
+      // Nếu nhạc chưa được bật, cố gắng phát nhạc khi người dùng nhấn vào biểu tượng
       audio.play().catch((error) => {
-        console.error("Lỗi phát nhạc: ", error.message);
+        console.error("Error playing audio: ", error);
         toast({
-          title: "Không thể phát nhạc",
-          description: "Vui lòng thử lại!",
-          className: "bg-red-500 text-white rounded-lg p-4 shadow-lg",
+          title: "Lỗi phát nhạc",
+          description: "Có lỗi khi phát nhạc!",
+          className: "bg-red-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho lỗi
           duration: 2000,
         });
       });
 
       toast({
         title: "Nhạc đã bật",
-        description: "Đang phát Beautiful In White.",
-        className: "bg-green-500 text-white rounded-lg p-4 shadow-lg",
+        description: "Nhạc đang phát!",
+        className: "bg-green-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho thành công
         duration: 2000,
       });
     } else {
+      // Nếu nhạc đang phát, dừng nhạc
       audio.pause();
       toast({
         title: "Nhạc đã tắt",
-        description: "Nhạc đã được dừng.",
-        className: "bg-red-500 text-white rounded-lg p-4 shadow-lg",
+        description: "Nhạc đã được tắt!",
+        className: "bg-red-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho thành công
         duration: 2000,
       });
     }
 
+    // Đảo trạng thái của nhạc
     setIsPlaying((prev) => !prev);
   };
 
-  // Đảm bảo nhạc tải xong trước khi cho phép phát
+  // Tự động phát nhạc nếu cần sau khi người dùng nhấn vào biểu tượng
   useEffect(() => {
-    const handleCanPlayThrough = () => {
-      setIsLoaded(true);
-    };
-
-    const handleError = () => {
-      console.error("Lỗi tải nhạc.");
-      toast({
-        title: "Lỗi tải nhạc",
-        description: "Không thể tải file nhạc.",
-        className: "bg-red-500 text-white rounded-lg p-4 shadow-lg",
-        duration: 2000,
+    if (isPlaying) {
+      audio.play().catch((error) => {
+        console.error("Error playing audio: ", error);
+        toast({
+          title: "Lỗi phát nhạc",
+          description: "Có lỗi khi phát nhạc!",
+          className: "bg-red-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho lỗi
+          duration: 2000,
+        });
       });
-    };
-
-    audio.addEventListener("canplaythrough", handleCanPlayThrough);
-    audio.addEventListener("error", handleError);
+    } else {
+      audio.pause();
+    }
 
     return () => {
-      audio.removeEventListener("canplaythrough", handleCanPlayThrough);
-      audio.removeEventListener("error", handleError);
       audio.pause(); // Dừng nhạc khi component bị unmount
     };
-  }, [audio, toast]);
+  }, [isPlaying, audio]); // Khi isPlaying thay đổi, phát nhạc
 
-  // Giao diện
   return (
     <div
       onClick={toggleMusic}
-      className="fixed bottom-2 left-4 p-4 bg-wedding-deep rounded-full shadow-lg cursor-pointer transition-all duration-300"
+      className="fixed bottom-4 left-4 p-4 bg-wedding-deep rounded-full shadow-lg cursor-pointer transition-all duration-300"
     >
       {isPlaying ? (
         <HiMusicNote className="text-white text-3xl" />
