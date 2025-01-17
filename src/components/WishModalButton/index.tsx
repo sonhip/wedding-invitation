@@ -34,6 +34,7 @@ const WishModalButton: React.FC = () => {
 
     try {
       const response = await axios.post(url, { name, message });
+      console.log("🚀 ~ handleSubmit ~ response:", response);
       toast({
         title: "Lời chúc đã được gửi!",
         description: "Cảm ơn bạn đã gửi lời chúc!",
