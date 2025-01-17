@@ -1,8 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
-import brideImage from "../../assets/gallery-images/2.jpeg";
-import groomImage from "../../assets/gallery-images/groom.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,7 +64,9 @@ const PeopleSection = () => {
           {/* Bride Section */}
           <div className="flex flex-col items-center">
             <img
-              src={brideImage}
+              src={
+                "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/2.jpeg"
+              }
               alt="Cô Dâu"
               className="person-image w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg mb-6"
             />
@@ -81,7 +81,9 @@ const PeopleSection = () => {
           {/* Groom Section */}
           <div className="flex flex-col items-center">
             <img
-              src={groomImage}
+              src={
+                "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/groom.png"
+              }
               alt="Chú Rể"
               className="person-image w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg mb-6"
             />

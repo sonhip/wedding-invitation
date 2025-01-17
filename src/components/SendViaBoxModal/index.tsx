@@ -6,7 +6,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import React from "react";
-import imageQrBride from "../../assets/others/qr.png";
 
 const SendViaBoxModal: React.FC = () => {
   return (
@@ -29,7 +28,9 @@ const SendViaBoxModal: React.FC = () => {
               Mừng Cưới Cô Dâu
             </h3>
             <img
-              src={imageQrBride}
+              src={
+                "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/qr.png"
+              }
               alt="Cô Dâu"
               className="w-full h-auto object-cover mb-4 rounded-lg"
             />

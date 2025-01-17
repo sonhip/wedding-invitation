@@ -1,24 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import image1 from "../../assets/gallery-images/1.jpeg";
-import image2 from "../../assets/gallery-images/2.jpeg";
-import image3 from "../../assets/gallery-images/3.jpeg";
-import image4 from "../../assets/gallery-images/4.jpeg";
-import image5 from "../../assets/gallery-images/5.jpeg";
-import image6 from "../../assets/gallery-images/6.jpeg";
-import image7 from "../../assets/gallery-images/7.jpeg";
 
 const images = [
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image6,
-  image7,
-  image3,
-  image6,
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/1.jpeg",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/2.jpeg",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/3.jpeg",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/4.jpeg",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/5.jpeg",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/6.jpeg",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/7.jpeg",
 ];
 
 // Đăng ký plugin ScrollTrigger
@@ -188,8 +179,8 @@ const EventDetailsSection: React.FC = () => {
             >
               Tiệc nhà trai được tổ chức vào
             </h3>
-            <p className="text-wedding-light text-lg">Ngày: 06/02/2025</p>
-            <p className="text-wedding-light text-lg">Giờ: 10:00</p>
+            <p className="text-wedding-light text-lg">Ngày: 07/02/2025</p>
+            <p className="text-wedding-light text-lg">Giờ: 11:00</p>
             <p className="text-wedding-light text-lg">
               Địa điểm: Thôn 2 - Xã Tiên Trang - Huyện Quảng Xương - Thanh Hóa
             </p>

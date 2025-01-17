@@ -1,23 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./styles.css";
-import image1 from "../../assets/gallery-images/1.jpeg";
-import image2 from "../../assets/gallery-images/2.jpeg";
-import image3 from "../../assets/gallery-images/bride.png";
-import image4 from "../../assets/gallery-images/tt.png";
-import image5 from "../../assets/gallery-images/5.jpeg";
-import image6 from "../../assets/gallery-images/tt2.png";
-import image7 from "../../assets/gallery-images/7.jpeg";
 
 const galleryImages = [
-  image1,
-  image2,
-  image3,
-  image4,
-  image5,
-  image6,
-  image7,
-  image3,
-  image6,
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/1.jpeg",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/2.jpeg",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/bride.png",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/tt.png",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/5.jpeg",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/tt2.png",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/7.jpeg",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/bride.png",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/5.jpeg",
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/1.jpeg",
 ];
 
 const RotatingBox: React.FC = () => {

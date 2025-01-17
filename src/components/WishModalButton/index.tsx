@@ -6,6 +6,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import axios from "axios";
 import { useToast } from "@/hooks/use-toast";
 import React, { useState } from "react";
 
@@ -14,31 +15,41 @@ const WishModalButton: React.FC = () => {
   const [message, setMessage] = useState("");
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (name.trim() === "" || message.trim() === "") {
-      // Thông báo lỗi
       toast({
         title: "Lỗi!",
         description: "Vui lòng điền đầy đủ thông tin!",
-        duration: 3000, // Thời gian hiển thị của toast
-        className: "bg-red-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho lỗi
+        duration: 3000,
+        className: "bg-red-500 text-white rounded-lg p-4 shadow-lg",
       });
       return;
     }
 
-    setName("");
-    setMessage("");
+    // URL của Web App từ Google Apps Script
+    const url =
+      "https://script.google.com/macros/s/AKfycbz3WOe8MoMVnou853NeSKrfEGZeT5EpkeKUYthibBdR68mcfYy9m3p7CthZaoautNzX/exec";
 
-    // Thông báo gửi thành công
-    toast({
-      title: "Lời chúc đã được gửi!",
-      description:
-        "Cảm ơn bạn đã gửi lời chúc tốt đẹp dành cho cô dâu và chú rể!",
-      duration: 3000, // Thời gian hiển thị của toast
-      className: "bg-green-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho thành công
-    });
+    try {
+      const response = await axios.post(url, { name, message });
+      toast({
+        title: "Lời chúc đã được gửi!",
+        description: "Cảm ơn bạn đã gửi lời chúc!",
+        duration: 3000,
+        className: "bg-green-500 text-white rounded-lg p-4 shadow-lg",
+      });
+      setName("");
+      setMessage("");
+    } catch (error) {
+      toast({
+        title: "Lỗi!",
+        description: "Có lỗi khi gửi dữ liệu!",
+        duration: 3000,
+        className: "bg-red-500 text-white rounded-lg p-4 shadow-lg",
+      });
+    }
   };
 
   return (

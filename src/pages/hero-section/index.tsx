@@ -1,11 +1,12 @@
 import WishModalButton from "@/components/WishModalButton";
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
-import image7 from "../../assets/gallery-images/7.jpeg";
 
 export const WEDDING_DATE = "06/02/2025";
 
-const images = [image7];
+const images = [
+  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/7.jpeg",
+];
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
