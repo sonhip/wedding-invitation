@@ -17,12 +17,12 @@ const MusicToggleIcon: React.FC = () => {
       // Nếu nhạc chưa được bật, cố gắng phát nhạc khi người dùng nhấn vào biểu tượng
       audio.play().catch((error) => {
         console.error("Error playing audio: ", error);
-        toast({
-          title: "Lỗi phát nhạc",
-          description: "Có lỗi khi phát nhạc!",
-          className: "bg-red-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho lỗi
-          duration: 2000,
-        });
+        // toast({
+        //   title: "Lỗi phát nhạc",
+        //   description: "Có lỗi khi phát nhạc!",
+        //   className: "bg-red-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho lỗi
+        //   duration: 2000,
+        // });
       });
 
       toast({
@@ -51,12 +51,12 @@ const MusicToggleIcon: React.FC = () => {
     if (isPlaying) {
       audio.play().catch((error) => {
         console.error("Error playing audio: ", error);
-        toast({
-          title: "Lỗi phát nhạc",
-          description: "Có lỗi khi phát nhạc!",
-          className: "bg-red-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho lỗi
-          duration: 2000,
-        });
+        // toast({
+        //   title: "Lỗi phát nhạc",
+        //   description: "Có lỗi khi phát nhạc!",
+        //   className: "bg-red-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho lỗi
+        //   duration: 2000,
+        // });
       });
     } else {
       audio.pause();
