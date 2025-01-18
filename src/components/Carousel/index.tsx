@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./styles.css";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const galleryImages = [
   "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/1.jpeg",
@@ -94,13 +95,13 @@ const RotatingBox: React.FC = () => {
           onClick={handlePrev}
           className="px-4 py-1 sm:px-6 sm:py-2 bg-wedding-deep text-wedding-light text-sm sm:text-lg font-semibold rounded-lg"
         >
-          Prev
+          <ChevronLeft />
         </button>
         <button
           onClick={handleNext}
           className="px-4 py-1 sm:px-6 sm:py-2 bg-wedding-deep text-wedding-light text-sm sm:text-lg font-semibold rounded-lg"
         >
-          Next
+          <ChevronRight />
         </button>
       </div>
     </div>

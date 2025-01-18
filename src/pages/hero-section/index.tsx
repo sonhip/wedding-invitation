@@ -2,7 +2,7 @@ import WishModalButton from "@/components/WishModalButton";
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
 
-export const WEDDING_DATE = "06/02/2025";
+export const WEDDING_DATE = "07/02/2025";
 
 const images = [
   "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/7.jpeg",

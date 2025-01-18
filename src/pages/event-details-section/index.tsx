@@ -157,7 +157,12 @@ const EventDetailsSection: React.FC = () => {
             <div className="flex space-x-4">
               <button
                 className="btn bg-wedding-deep text-wedding-light px-6 py-2 rounded shadow-lg"
-                onClick={() => window.open("https://maps.google.com", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://maps.google.com/?q=Thôn+1,+Xã+Thuận+Minh,+Huyện+Thọ+Xuân,+Thanh+Hóa",
+                    "_blank"
+                  )
+                }
               >
                 Hướng dẫn đi
               </button>
@@ -187,7 +192,12 @@ const EventDetailsSection: React.FC = () => {
             <div className="flex space-x-4">
               <button
                 className="btn bg-wedding-deep text-wedding-light px-6 py-2 rounded shadow-lg"
-                onClick={() => window.open("https://maps.google.com", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://maps.google.com/?q=Thôn+2,+Xã+Tiên+Trang,+Huyện+Quảng+Xương,+Thanh+Hóa",
+                    "_blank"
+                  )
+                }
               >
                 Hướng dẫn đi
               </button>
