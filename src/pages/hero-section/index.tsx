@@ -21,7 +21,7 @@ import image6 from "../../assets/gallery-images/6.webp";
 import image7 from "../../assets/gallery-images/7.webp";
 import image8 from "../../assets/gallery-images/8.webp";
 import image9 from "../../assets/gallery-images/9.webp";
-export const WEDDING_DATE = "13/09/2025";
+export const WEDDING_DATE = "13/12/2025";
 
 const images = [
   image1,
