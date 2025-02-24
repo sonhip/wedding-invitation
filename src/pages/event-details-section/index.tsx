@@ -3,13 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const images = [
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/1.jpeg",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/2.jpeg",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/3.jpeg",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/4.jpeg",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/5.jpeg",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/6.jpeg",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/7.jpeg",
+  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/csmz2fnpteftwep4lp1c.jpg",
 ];
 
 // Đăng ký plugin ScrollTrigger
@@ -17,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const EventDetailsSection: React.FC = () => {
   const [backgroundImage, setBackgroundImage] = useState<string>(
-    "https://thiepcuoionline.huythanhjewelry.vn/storage/jkLnqOgzKT.webp"
+    "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/csmz2fnpteftwep4lp1c.jpg"
   );
 
   useEffect(() => {
@@ -64,31 +58,31 @@ const EventDetailsSection: React.FC = () => {
       }
     );
 
-    // GSAP animation for changing background images
-    const interval = setInterval(() => {
-      // Animate background change
-      gsap.to(".background-image", {
-        opacity: 0,
-        duration: 1,
-        onComplete: () => {
-          // Update the background image after fade out
-          setBackgroundImage((prevImage) => {
-            const currentIndex = images.indexOf(prevImage);
-            const nextIndex = (currentIndex + 1) % images.length;
-            return images[nextIndex];
-          });
+    // // GSAP animation for changing background images
+    // const interval = setInterval(() => {
+    //   // Animate background change
+    //   gsap.to(".background-image", {
+    //     opacity: 0,
+    //     duration: 1,
+    //     onComplete: () => {
+    //       // Update the background image after fade out
+    //       setBackgroundImage((prevImage) => {
+    //         const currentIndex = images.indexOf(prevImage);
+    //         const nextIndex = (currentIndex + 1) % images.length;
+    //         return images[nextIndex];
+    //       });
 
-          // Fade in the new background image
-          gsap.to(".background-image", {
-            opacity: 1,
-            duration: 1,
-          });
-        },
-      });
-    }, 3000); // Change background every 3 seconds
+    //       // Fade in the new background image
+    //       gsap.to(".background-image", {
+    //         opacity: 1,
+    //         duration: 1,
+    //       });
+    //     },
+    //   });
+    // }, 3000); // Change background every 3 seconds
 
-    // Dọn dẹp interval khi component unmount
-    return () => clearInterval(interval);
+    // // Dọn dẹp interval khi component unmount
+    // return () => clearInterval(interval);
   }, []);
 
   // GSAP hover animations for buttons
@@ -136,7 +130,7 @@ const EventDetailsSection: React.FC = () => {
             style={{ textShadow: "0 4px 6px rgba(0, 0, 0, 0.3)" }}
           >
             Tình yêu đích thực đứng về phía nhau trong những ngày tốt đẹp và sát
-            cánh hơn trong những ngày tồi tệ.
+            cánh hơn trong những ngày mệt mỏi.
           </p>
         </div>
 
@@ -149,17 +143,18 @@ const EventDetailsSection: React.FC = () => {
             >
               Tiệc nhà gái được tổ chức vào
             </h3>
-            <p className="text-wedding-light text-lg">Ngày: 06/02/2025</p>
-            <p className="text-wedding-light text-lg">Giờ: 16:00</p>
+            <p className="text-wedding-light text-lg">Ngày: 14/03/2025</p>
+            <p className="text-wedding-light text-lg">Giờ: 07:30</p>
             <p className="text-wedding-light text-lg">
-              Địa điểm: Thôn 1 - Xã Thuận Minh - Huyện Thọ Xuân - Thanh Hóa
+              Địa điểm: Đội 1 - Thôn An Tân - Xã Gia Phúc - Huyện Gia Lộc - Tỉnh
+              Hải Dương
             </p>
             <div className="flex space-x-4">
               <button
                 className="btn bg-wedding-deep text-wedding-light px-6 py-2 rounded shadow-lg"
                 onClick={() =>
                   window.open(
-                    "https://maps.google.com/?q=Thôn+1,+Xã+Thuận+Minh,+Huyện+Thọ+Xuân,+Thanh+Hóa",
+                    "https://maps.app.goo.gl/k2M6ofqWPnT7zGP78",
                     "_blank"
                   )
                 }
@@ -184,17 +179,19 @@ const EventDetailsSection: React.FC = () => {
             >
               Tiệc nhà trai được tổ chức vào
             </h3>
-            <p className="text-wedding-light text-lg">Ngày: 07/02/2025</p>
+            <p className="text-wedding-light text-lg">Ngày: 15/03/2025</p>
             <p className="text-wedding-light text-lg">Giờ: 11:00</p>
             <p className="text-wedding-light text-lg">
-              Địa điểm: Thôn 2 - Xã Tiên Trang - Huyện Quảng Xương - Thanh Hóa
+              Địa điểm: Trung tâm tiệc cưới Trống Đồng Place Hoàng Gia <br />
+              Phòng Hoàng Gia tầng 1, số 172 Trường Chinh - Tân Bình - TP.Hải
+              Dương
             </p>
             <div className="flex space-x-4">
               <button
                 className="btn bg-wedding-deep text-wedding-light px-6 py-2 rounded shadow-lg"
                 onClick={() =>
                   window.open(
-                    "https://maps.google.com/?q=Thôn+2,+Xã+Tiên+Trang,+Huyện+Quảng+Xương,+Thanh+Hóa",
+                    "https://maps.app.goo.gl/2v3SzqCLtpCtCCom8",
                     "_blank"
                   )
                 }

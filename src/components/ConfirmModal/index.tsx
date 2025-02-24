@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import React, { useState } from "react";
+import { init, send } from "emailjs-com";
+init("engo7mL1i7oAzFIgy"); // Thay bằng Public Key của bạn
 
 const ConfirmModalButton: React.FC = () => {
   const [name, setName] = useState("");
@@ -19,27 +21,48 @@ const ConfirmModalButton: React.FC = () => {
     e.preventDefault();
 
     if (name.trim() === "" || phone.trim() === "") {
-      // Thông báo lỗi nếu tên hoặc số điện thoại trống
       toast({
         title: "Lỗi!",
         description: "Vui lòng điền đầy đủ thông tin!",
-        duration: 3000, // Thời gian hiển thị của toast
-        className: "bg-red-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho lỗi
+        duration: 3000,
+        className: "bg-red-500 text-white rounded-lg p-4 shadow-lg",
       });
       return;
     }
 
-    setName("");
-    setPhone("");
-    setNote("");
+    // Định dạng toàn bộ thông tin thành một chuỗi duy nhất
+    const emailParams = {
+      message: `
+      📌 Thông tin đăng ký:
+      - 👤 Họ và tên: ${name}
+      - 📞 Số điện thoại: ${phone}
+      - 📝 Ghi chú: ${note || "Không có ghi chú"}
+      - 📅 Ngày gửi: ${new Date().toLocaleString()}
+    `,
+    };
 
-    // Thông báo gửi thành công
-    toast({
-      title: "Thông tin đã được gửi!",
-      description: "Cảm ơn bạn đã gửi thông tin xác nhận!",
-      duration: 3000, // Thời gian hiển thị của toast
-      className: "bg-green-500 text-white rounded-lg p-4 shadow-lg", // Tailwind class cho thành công
-    });
+    send("service_qvdyek7", "template_12xrwrp", emailParams)
+      .then(() => {
+        toast({
+          title: "Thông tin đã được gửi!",
+          description: "Cảm ơn bạn đã gửi thông tin xác nhận!",
+          duration: 3000,
+          className: "bg-green-500 text-white rounded-lg p-4 shadow-lg",
+        });
+
+        setName("");
+        setPhone("");
+        setNote("");
+      })
+      .catch((error: any) => {
+        console.error("Lỗi khi gửi email:", error);
+        toast({
+          title: "Lỗi!",
+          description: "Không thể gửi email. Vui lòng thử lại!",
+          duration: 3000,
+          className: "bg-red-500 text-white rounded-lg p-4 shadow-lg",
+        });
+      });
   };
 
   return (

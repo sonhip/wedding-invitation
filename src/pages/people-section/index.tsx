@@ -65,13 +65,13 @@ const PeopleSection = () => {
           <div className="flex flex-col items-center">
             <img
               src={
-                "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/2.jpeg"
+                "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/ozznqlkvo3xn6oqwan5l.jpg"
               }
               alt="Cô Dâu"
               className="person-image w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg mb-6"
             />
             <h3 className="person-info text-2xl font-semibold text-wedding-deep mb-2">
-              Thu Trang
+              Minh Anh
             </h3>
             <p className="person-info text-lg text-wedding-purple">
               Cô dâu xinh đẹp và dễ thương.
@@ -82,13 +82,13 @@ const PeopleSection = () => {
           <div className="flex flex-col items-center">
             <img
               src={
-                "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/groom.png"
+                "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404784/wedding-images/j92nk0oxt35n78s6o0u5.jpg"
               }
               alt="Chú Rể"
               className="person-image w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg mb-6"
             />
             <h3 className="person-info text-2xl font-semibold text-wedding-deep mb-2">
-              Lê Hậu
+              Trần Hiệp
             </h3>
             <p className="person-info text-lg text-wedding-purple">
               Chú rể đẹp trai và hài hước.

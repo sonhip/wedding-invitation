@@ -6,9 +6,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import axios from "axios";
 import { useToast } from "@/hooks/use-toast";
 import React, { useState } from "react";
+import { init, send } from "emailjs-com";
+init("engo7mL1i7oAzFIgy"); // Thay bằng Public Key của bạn
 
 const WishModalButton: React.FC = () => {
   const [name, setName] = useState("");
@@ -28,22 +29,30 @@ const WishModalButton: React.FC = () => {
       return;
     }
 
-    // URL của Web App từ Google Apps Script
-    const url =
-      "https://script.google.com/macros/s/AKfycbz3WOe8MoMVnou853NeSKrfEGZeT5EpkeKUYthibBdR68mcfYy9m3p7CthZaoautNzX/exec";
+    // Định dạng dữ liệu thành một chuỗi duy nhất
+    const emailParams = {
+      message: `
+        🎉 Lời chúc mới từ:
+        - 👤 Tên: ${name}
+        - 📝 Lời chúc: ${message}
+        - 📅 Ngày gửi: ${new Date().toLocaleString()}
+      `,
+    };
 
     try {
-      const response = await axios.post(url, { name, message });
-      console.log("🚀 ~ handleSubmit ~ response:", response);
+      await send("service_qvdyek7", "template_12xrwrp", emailParams);
+
       toast({
         title: "Lời chúc đã được gửi!",
         description: "Cảm ơn bạn đã gửi lời chúc!",
         duration: 3000,
         className: "bg-green-500 text-white rounded-lg p-4 shadow-lg",
       });
+
       setName("");
       setMessage("");
     } catch (error) {
+      console.error("Lỗi khi gửi email:", error);
       toast({
         title: "Lỗi!",
         description: "Có lỗi khi gửi dữ liệu!",

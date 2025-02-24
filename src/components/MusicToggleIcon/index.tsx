@@ -6,7 +6,7 @@ const MusicToggleIcon: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false); // Trạng thái nhạc (mặc định là không phát)
   const [audio] = useState(
     new Audio(
-      "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/beautiful_in_white.mp3"
+      "https://res.cloudinary.com/db8mh2s66/video/upload/v1740411565/wedding-images/fbkdkzhxkrnvkgu1idii.mp3"
     )
   ); // Đường dẫn đến file nhạc
   const { toast } = useToast();

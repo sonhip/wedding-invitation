@@ -35,26 +35,24 @@ const SendViaBoxModal: React.FC = () => {
               className="w-full h-auto object-cover mb-4 rounded-lg"
             />
             <p className="text-center text-wedding-purple">
-              Ngân hàng: Vietcombank <br /> Tên: Phạm Thị Thu Trang <br /> STK:
-              9367565924
+              Ngân hàng: Vietcombank <br /> Tên: Bùi Minh Anh <br /> STK: 44444
             </p>
           </div>
 
           {/* Box Chú Rể */}
-          {/* <div className="border p-4 rounded-lg shadow-md">
+          <div className="border p-4 rounded-lg shadow-md">
             <h3 className="text-center text-xl font-semibold text-wedding-deep mb-4">
               Mừng Cưới Chú Rể
             </h3>
             <img
-              src={imageQrGroom}
+              src={""}
               alt="Chú Rể"
               className="w-full h-auto object-cover mb-4 rounded-lg"
             />
             <p className="text-center text-wedding-purple">
-              Ngân hàng: Techcombank <br /> Tên: Nguyễn Trường Sinh <br /> STK:
-              940311888888
+              Ngân hàng: Techcombank <br /> Tên: Trần Văn Hiệp <br /> STK: 8888
             </p>
-          </div> */}
+          </div>
         </div>
 
         <div className="mt-6 flex justify-center">

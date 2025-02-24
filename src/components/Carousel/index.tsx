@@ -3,16 +3,14 @@ import "./styles.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const galleryImages = [
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/1.jpeg",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/2.jpeg",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/bride.png",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/tt.png",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/5.jpeg",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/tt2.png",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/7.jpeg",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/bride.png",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/5.jpeg",
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/1.jpeg",
+  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/yhbbxsdprkdvt06lfmab.jpg",
+  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/csmz2fnpteftwep4lp1c.jpg",
+  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/q3y4egkv3uucmmwtacko.jpg",
+  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/j7conscc0ni2kiphsmum.jpg",
+  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404783/wedding-images/jwxl6cxkkllqsrvkss43.jpg",
+  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404783/wedding-images/v6eleejskl4fukahl2xc.jpg",
+  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404783/wedding-images/c7p4dxgj1xy51jgkvmta.jpg",
+  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/csmz2fnpteftwep4lp1c.jpg",
 ];
 
 const RotatingBox: React.FC = () => {

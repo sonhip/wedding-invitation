@@ -63,7 +63,7 @@ const FooterSection: React.FC = () => {
         {/* Copyright Text */}
         <div className="footer-item">
           <p className="text-sm text-wedding-light">
-            © 2025 [Thu Trang] & [Lê Hậu] - All Rights Reserved
+            © 2025 [Trần Hiệp] & [Minh Anh] - All Rights Reserved
           </p>
         </div>
 

@@ -2,10 +2,13 @@ import WishModalButton from "@/components/WishModalButton";
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
 
-export const WEDDING_DATE = "07/02/2025";
+export const WEDDING_DATE = "15/03/2025";
 
 const images = [
-  "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/7.jpeg",
+  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404783/wedding-images/v6eleejskl4fukahl2xc.jpg",
+  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/yhbbxsdprkdvt06lfmab.jpg",
+  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404783/wedding-images/jwxl6cxkkllqsrvkss43.jpg",
+  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/csmz2fnpteftwep4lp1c.jpg",
 ];
 
 const HeroSection = () => {
@@ -57,7 +60,7 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-4xl mx-auto">
         {/* Title */}
         <h1 className="hero-title text-wedding-deep text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-          Lê Hậu & Thu Trang
+          Trần Hiệp & Minh Anh
         </h1>
 
         {/* Subtitle */}
