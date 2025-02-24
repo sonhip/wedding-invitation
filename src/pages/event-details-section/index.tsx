@@ -2,19 +2,15 @@ import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const images = [
-  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/csmz2fnpteftwep4lp1c.jpg",
-];
-
 // Đăng ký plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
 const EventDetailsSection: React.FC = () => {
-  const [backgroundImage, setBackgroundImage] = useState<string>(
-    "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/csmz2fnpteftwep4lp1c.jpg"
-  );
+  const [backgroundImage] = useState<string>("");
 
-  useEffect(() => {
+  //res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/csmz2fnpteftwep4lp1c.jpg
+
+  https: useEffect(() => {
     // GSAP Scroll Animation cho phần Event Details
     gsap.fromTo(
       ".event-title",
