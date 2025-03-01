@@ -51,7 +51,7 @@ const AboutUsSection: React.FC = () => {
     {
       title: "15/03/2025 và sau nữa",
       description:
-        'Ngày chung đôi. Câu chuyện khởi đầu vào mùa xuân, nên chúng mình muốn viết nên một cái kết hạnh phúc vào mùa đông. Để mùa xuân tiếp theo, chúng mình sẽ cùng nhau viết nên một câu chuyện khác, nhưng giờ với một vai trò mới, là "Vợ", là "Chồng". Vào ngày 07/02/2025 tới này, mong bạn đến chung vui và cùng chứng kiến cái kết hạnh phúc cho câu chuyện chúng mình, và cùng nhau mở ra một hành trình mới nhé :))',
+        'Ngày chung đôi. Câu chuyện khởi đầu vào mùa xuân, nên chúng mình muốn viết nên một cái kết hạnh phúc vào mùa đông. Để mùa xuân tiếp theo, chúng mình sẽ cùng nhau viết nên một câu chuyện khác, nhưng giờ với một vai trò mới, là "Vợ", là "Chồng". Vào ngày 15/03/2025 tới này, mong bạn đến chung vui và cùng chứng kiến cái kết hạnh phúc cho câu chuyện chúng mình, và cùng nhau mở ra một hành trình mới nhé!',
       image:
         "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404783/wedding-images/py1pldckohjmycgaqjmt.jpg",
     },

@@ -21,26 +21,27 @@ const SendViaBoxModal: React.FC = () => {
           </DialogTitle>
         </DialogHeader>
 
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 overflow-auto max-h-[450px]">
+        <div className="mt-6 overflow-auto max-h-[450px]">
           {/* Box Cô Dâu */}
-          <div className="border p-4 rounded-lg shadow-md">
+          <div className="border p-4 rounded-lg shadow-md mx-auto w-96">
             <h3 className="text-center text-xl font-semibold text-wedding-deep mb-4">
               Mừng Cưới Cô Dâu
             </h3>
             <img
               src={
-                "https://lehau-thutrang-wedding.s3.ap-southeast-1.amazonaws.com/qr.png"
+                "https://res.cloudinary.com/db8mh2s66/image/upload/v1740788711/wedding-images/uxxy8g8ok0evugoiu4sy.jpg"
               }
               alt="Cô Dâu"
               className="w-full h-auto object-cover mb-4 rounded-lg"
             />
             <p className="text-center text-wedding-purple">
-              Ngân hàng: Vietcombank <br /> Tên: Bùi Minh Anh <br /> STK: 44444
+              Ngân hàng: TMCP Công Thương Việt Nam <br /> Tên: Bùi Minh Anh{" "}
+              <br /> STK: 109875166812
             </p>
           </div>
 
           {/* Box Chú Rể */}
-          <div className="border p-4 rounded-lg shadow-md">
+          {/* <div className="border p-4 rounded-lg shadow-md">
             <h3 className="text-center text-xl font-semibold text-wedding-deep mb-4">
               Mừng Cưới Chú Rể
             </h3>
@@ -52,7 +53,7 @@ const SendViaBoxModal: React.FC = () => {
             <p className="text-center text-wedding-purple">
               Ngân hàng: Techcombank <br /> Tên: Trần Văn Hiệp <br /> STK: 8888
             </p>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-6 flex justify-center">

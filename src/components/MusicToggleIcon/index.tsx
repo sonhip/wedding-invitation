@@ -43,7 +43,7 @@ const MusicToggleIcon: React.FC = () => {
       <audio
         loop
         ref={audioRef}
-        src="https://res.cloudinary.com/db8mh2s66/video/upload/v1740411565/wedding-images/fbkdkzhxkrnvkgu1idii.mp3"
+        src="https://res.cloudinary.com/db8mh2s66/video/upload/v1740788713/wedding-images/sdzf6yvqexdms4r0v8li.mp3"
         preload="auto"
       />
     </div>

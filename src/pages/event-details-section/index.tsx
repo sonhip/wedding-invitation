@@ -140,7 +140,7 @@ const EventDetailsSection: React.FC = () => {
               Tiệc nhà gái được tổ chức vào
             </h3>
             <p className="text-wedding-light text-lg">Ngày: 14/03/2025</p>
-            <p className="text-wedding-light text-lg">Giờ: 07:30</p>
+            <p className="text-wedding-light text-lg">Giờ: 16:00</p>
             <p className="text-wedding-light text-lg">
               Địa điểm: Đội 1 - Thôn An Tân - Xã Gia Phúc - Huyện Gia Lộc - Tỉnh
               Hải Dương
