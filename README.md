@@ -1,50 +1,86 @@
-# React + TypeScript + Vite
+# 💍 Wedding Invitation Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website thiệp cưới hiện đại, xây dựng bằng React + TypeScript + Vite + Tailwind CSS. Cho phép khách mời xem thông tin sự kiện, gửi lời chúc và xác nhận tham dự.
 
-Currently, two official plugins are available:
+## 🚀 Tính năng
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Giao diện đẹp, responsive cho mọi thiết bị
+- Gửi lời chúc tới cô dâu chú rể qua EmailJS
+- Xác nhận tham dự sự kiện
+- Hiển thị thông tin, hình ảnh, đếm ngược, thư cảm ơn, v.v.
 
-## Expanding the ESLint configuration
+## 🛠️ Công nghệ sử dụng
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [EmailJS](https://www.emailjs.com/)
 
-- Configure the top-level `parserOptions` property like this:
+## ⚡ Cài đặt & chạy local
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+# Clone project
+git clone https://github.com/your-username/wedding-invitation.git
+cd wedding-invitation
+
+# Cài đặt dependencies
+yarn install
+
+# Chạy dev server
+yarn dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Truy cập [http://localhost:5173](http://localhost:5173) để xem website.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 🔑 Cấu hình EmailJS
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+1. Đăng ký tài khoản tại [EmailJS](https://www.emailjs.com/)
+2. Tạo Service, Template và lấy Public Key
+3. Thêm các thông tin vào file `.env`:
+
+```env
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
 ```
+
+> **Lưu ý:** Không commit file `.env` lên repo công khai.
+
+## 📁 Cấu trúc thư mục
+
+```
+src/
+  assets/           # Hình ảnh, icon
+  components/       # Các component UI, modal, form
+  hooks/            # Custom hooks
+  lib/              # Tiện ích dùng chung
+  pages/            # Các section nội dung
+public/             # Ảnh, favicon, tệp tĩnh
+```
+
+## 🧑‍💻 Phát triển
+
+- Sử dụng ESLint, Prettier để giữ code sạch
+- Tùy chỉnh theme, nội dung trong các file ở `src/pages/` và `src/components/`
+- Thay đổi thông tin sự kiện trong các section tương ứng
+
+## 🛡️ Lưu ý bảo mật
+
+- Không để lộ Public Key, Service ID, Template ID của EmailJS trên repo công khai
+- Sử dụng `.env.example` để hướng dẫn cấu hình
+- Thêm `.env*` vào `.gitignore`
+
+## 🌐 Deploy
+
+Bạn có thể deploy lên Vercel, Netlify, hoặc bất kỳ dịch vụ static hosting nào:
+
+```bash
+yarn build
+```
+
+Sau đó upload thư mục `dist/` lên hosting.
+
+## 📄 License
+
+MIT
