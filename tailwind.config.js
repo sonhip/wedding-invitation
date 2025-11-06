@@ -7,6 +7,7 @@ export default {
       fontFamily: {
         sans: ['"EB Garamond"', "system-ui", "sans-serif"],
         serif: ['"EB Garamond"', "serif"],
+        tinos: ['"Tinos"', "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -59,6 +60,8 @@ export default {
           pink: "#E3A5C7", // Màu hồng
           purple: "#B692C2", // Màu tím nhạt
           deep: "rgba(253,247,237,1.000)", // Màu tím đậm
+          cream: "#FDF7ED", // Màu be nhạt
+          brown: "#5C1F1F", // Màu đỏ nâu đậm
         },
         fontSize: {
           xs: ["0.75rem", "1rem"], // 12px, line-height 16px

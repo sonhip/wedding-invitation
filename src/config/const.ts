@@ -10,12 +10,12 @@ import { Stage } from "@/pages/about-us-section";
     Basic Info (Tên & Mô tả)
     =========================== */
 // Tên cô dâu
-export const BRIDE_NAME = "Thanh Thư";
+export const BRIDE_NAME = "Nguyễn Hương";
 // Mô tả ngắn về cô dâu
 export const BRIDE_DESCRIPTION = "Cô dâu xinh đẹp và dễ thương.";
 
 // Tên chú rể
-export const GROOM_NAME = "Mạnh Thắng";
+export const GROOM_NAME = "Hữu Thành";
 // Mô tả ngắn về chú rể
 export const GROOM_DESCRIPTION = "Chú rể đẹp trai và thông minh.";
 
@@ -23,7 +23,9 @@ export const GROOM_DESCRIPTION = "Chú rể đẹp trai và thông minh.";
     Hero (Phần chính trang chủ)
     =========================== */
 // Ngày & địa điểm chính của đám cưới hiển thị trên hero
-export const WEDDING_DATE = "30/11/2025";
+export const WEDDING_DATE = "02.11.2025";
+export const WEDDING_LOCATION = "Thôn Dổ Thượng - Xã Nguyễn Lương Bằng";
+export const WEDDING_LOCATION_CITY = "TP. Hải Phòng";
 // Mảng ảnh hiển thị trong hero (carousel/background)
 export const HERO_IMAGES = [
   "/images/gray-xy1.jpg",

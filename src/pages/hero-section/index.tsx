@@ -1,78 +1,126 @@
-import WishModalButton from "@/components/WishModalButton";
 import {
   BRIDE_NAME,
   GROOM_NAME,
   WEDDING_DATE,
-  HERO_IMAGES,
+  WEDDING_LOCATION,
+  WEDDING_LOCATION_CITY,
 } from "@/config/const";
+import { useGuestName } from "@/hooks/use-query-params";
 import { gsap } from "gsap";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const HeroSection = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % HERO_IMAGES.length);
-    }, 3000); // 3 seconds for image change
-
-    return () => clearInterval(interval); // Clean up interval on unmount
-  }, []);
+  const guestName = useGuestName();
 
   useEffect(() => {
     // GSAP Animation
     gsap.fromTo(
-      ".hero-title",
-      { opacity: 0, y: -50 },
-      { opacity: 1, y: 0, duration: 1, delay: 0.5 }
-    );
-
-    gsap.fromTo(
-      ".hero-subtitle",
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, delay: 1 }
-    );
-
-    gsap.fromTo(
-      ".hero-image",
-      { scale: 0.8, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 1, delay: 1.5 }
+      ".hero-fade-in",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 1, stagger: 0.2, delay: 0.3 }
     );
   }, []);
 
   return (
-    <section className="relative bg-wedding-light min-h-screen flex items-end md:items-center justify-center text-center p-6 pb-20 md:pb-6 overflow-hidden">
-      {/* Image Slider with repeat if needed */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-50">
-        <div
-          className="hero-image w-full h-full bg-cover bg-center transition-all duration-1000 ease-in-out"
-          style={{
-            backgroundImage: `url(${HERO_IMAGES[currentImage]})`,
-            backgroundRepeat: "repeat-x", // Repeat the image horizontally if not wide enough
-            backgroundSize: "auto 100%", // Maintain the aspect ratio and repeat horizontally
-          }}
-        ></div>
-      </div>
+    <section className="relative bg-wedding-cream min-h-screen flex items-center justify-center text-center px-6 py-12 overflow-hidden">
+      {/* Corner decorations - using images */}
+      <img
+        src="/images/boxes/corner-topleft.webp"
+        alt=""
+        className="absolute top-0 left-0 w-24 h-24 md:w-32 md:h-32 object-contain"
+      />
+      <img
+        src="/images/boxes/corner-topleft.webp"
+        alt=""
+        className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 object-contain rotate-90"
+      />
+      <img
+        src="/images/boxes/corner-topleft.webp"
+        alt=""
+        className="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 object-contain -rotate-90"
+      />
+      <img
+        src="/images/boxes/corner-topleft.webp"
+        alt=""
+        className="absolute bottom-0 right-0 w-24 h-24 md:w-32 md:h-32 object-contain rotate-180"
+      />
 
-      <div className="relative z-10 max-w-4xl mx-auto">
-        {/* Title */}
-        <h1 className="hero-title text-wedding-deep text-3xl md:text-6xl lg:text-7xl font-bold leading-tight">
-          {GROOM_NAME}
-          <br />
-          ♥️
-          <br />
-          {BRIDE_NAME}
-        </h1>
+      <div className="relative z-10 max-w-4xl mx-auto space-y-8 md:space-y-12">
+        {/* SAVE THE DATE */}
+        <div className="hero-fade-in">
+          <p className="text-wedding-brown text-2xl tracking-[0.3em] font-light uppercase">
+            SAVE THE DATE
+          </p>
+        </div>
 
-        {/* Subtitle */}
-        <p
-          style={{ textShadow: "0 4px 6px rgba(0, 0, 0, 0.3)" }}
-          className="hero-subtitle text-wedding-deep text-2xl md:text-3xl lg:text-4xl mt-8 leading-relaxed"
-        >
-          <b>{WEDDING_DATE}</b>
-        </p>
+        {/* Bride and Groom Names */}
+        <div className="hero-fade-in space-y-4">
+          <h1 className="text-wedding-brown text-5xl md:text-7xl lg:text-8xl font-serif leading-tight">
+            {GROOM_NAME}
+          </h1>
+          <div className="flex items-center justify-center gap-4">
+            <div className="w-16 h-[2px] bg-wedding-brown"></div>
+            ♥️
+            <div className="w-16 h-[2px] bg-wedding-brown"></div>
+          </div>
+          <h1 className="text-wedding-brown text-5xl md:text-7xl lg:text-8xl font-serif leading-tight">
+            {BRIDE_NAME}
+          </h1>
+        </div>
 
-        <WishModalButton />
+        {/* Double Happiness Symbol - using SVG */}
+        <div className="hero-fade-in flex justify-center">
+          <img
+            src="/images/boxes/hi.svg"
+            alt="囍"
+            className="w-32 h-32 md:w-40 md:h-40"
+          />
+        </div>
+
+        {/* Wedding Date */}
+        <div className="hero-fade-in">
+          <p className="text-wedding-brown text-3xl md:text-5xl lg:text-6xl font-light tracking-widest">
+            {WEDDING_DATE}
+          </p>
+        </div>
+
+        {/* Location */}
+        <div className="hero-fade-in space-y-2">
+          <p className="text-wedding-brown text-lg md:text-xl lg:text-2xl font-light">
+            {WEDDING_LOCATION}
+          </p>
+          <p className="text-wedding-brown text-lg md:text-xl lg:text-2xl font-light">
+            {WEDDING_LOCATION_CITY}
+          </p>
+        </div>
+
+        {/* Guest Name & Invitation */}
+        <div className="hero-fade-in space-y-4 pt-4">
+          <div className="w-full h-[1px] bg-wedding-brown opacity-30 max-w-md mx-auto"></div>
+          <p className="text-wedding-brown text-xl md:text-2xl font-serif italic">
+            TRÂN TRỌNG KÍNH MỜI
+          </p>
+          <p className="text-wedding-brown mt-2 text-2xl md:text-3xl lg:text-4xl font-tinos italic !-mb-3">
+            {guestName}
+          </p>
+          <div className="flex items-center justify-center gap-2 !mt-0">
+            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown">•</span>
+          </div>
+        </div>
       </div>
     </section>
   );
