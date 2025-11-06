@@ -75,28 +75,31 @@ const ConfirmModalButton: React.FC = () => {
         Xác nhận tham gia
       </DialogTrigger>
 
-      <DialogContent className="bg-white p-6 rounded-lg shadow-xl max-w-md mx-auto">
+      <DialogContent className="bg-white p-4 sm:p-6 rounded-lg shadow-xl max-w-[95vw] sm:max-w-md mx-auto max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-semibold text-wedding-deep">
+          <DialogTitle className="text-xl sm:text-2xl font-semibold text-wedding-deep">
             Xác nhận thông tin của bạn
           </DialogTitle>
-          <DialogDescription className="text-wedding-purple mt-4">
+          <DialogDescription className="text-wedding-purple mt-2 sm:mt-4 text-sm sm:text-base">
             Vui lòng điền tên, số điện thoại và ghi chú (nếu có) của bạn.
           </DialogDescription>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+        <form
+          onSubmit={handleSubmit}
+          className="mt-4 sm:mt-6 space-y-3 sm:space-y-4"
+        >
           <div>
             <label
               htmlFor="name"
-              className="block text-wedding-deep font-medium"
+              className="block text-wedding-deep font-medium text-sm sm:text-base"
             >
               Tên của bạn
             </label>
             <input
               type="text"
               id="name"
-              className="mt-2 p-3 w-full border border-wedding-purple rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep"
+              className="mt-2 p-2 sm:p-3 w-full border border-wedding-purple rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep text-sm sm:text-base"
               placeholder="Nhập tên của bạn"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -106,14 +109,14 @@ const ConfirmModalButton: React.FC = () => {
           <div>
             <label
               htmlFor="phone"
-              className="block text-wedding-deep font-medium"
+              className="block text-wedding-deep font-medium text-sm sm:text-base"
             >
               Số điện thoại
             </label>
             <input
               type="text"
               id="phone"
-              className="mt-2 p-3 w-full border border-wedding-purple rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep"
+              className="mt-2 p-2 sm:p-3 w-full border border-wedding-purple rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep text-sm sm:text-base"
               placeholder="Nhập số điện thoại của bạn"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
@@ -123,28 +126,26 @@ const ConfirmModalButton: React.FC = () => {
           <div>
             <label
               htmlFor="note"
-              className="block text-wedding-deep font-medium"
+              className="block text-wedding-deep font-medium text-sm sm:text-base"
             >
               Ghi chú (nếu có)
             </label>
             <textarea
               id="note"
-              className="mt-2 p-3 w-full h-32 border border-wedding-purple bg-transparent rounded-lg focus:ring-2 focus:ring-wedding-deep"
+              className="mt-2 p-2 sm:p-3 w-full h-24 sm:h-32 border border-wedding-purple bg-transparent rounded-lg focus:ring-2 focus:ring-wedding-deep text-sm sm:text-base"
               placeholder="Nhập ghi chú của bạn"
               value={note}
               onChange={(e) => setNote(e.target.value)}
             />
           </div>
 
-          <div className="mt-6 flex justify-end">
-            <DialogTrigger asChild>
-              <button
-                type="submit"
-                className="px-6 py-2 bg-wedding-deep text-wedding-light text-lg font-semibold rounded-lg"
-              >
-                Xác Nhận
-              </button>
-            </DialogTrigger>
+          <div className="mt-4 sm:mt-6 flex justify-end">
+            <button
+              type="submit"
+              className="px-4 sm:px-6 py-2 bg-wedding-deep text-wedding-light text-base sm:text-lg font-semibold rounded-lg hover:bg-wedding-deep/90 transition-colors"
+            >
+              Xác Nhận
+            </button>
           </div>
         </form>
       </DialogContent>

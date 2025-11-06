@@ -20,8 +20,8 @@ function App() {
         <AboutUsSection />
         <EventDetailsSection />
         <Carousel />
-        <GallerySection />
         <CountDownSection />
+        <GallerySection />
         <ThankYouSection />
         <FooterSection />
         <Toaster />

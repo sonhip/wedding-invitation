@@ -10,14 +10,12 @@ import { Stage } from "@/pages/about-us-section";
     Basic Info (Tên & Mô tả)
     =========================== */
 // Tên cô dâu
-export const BRIDE_NAME = "Ngọc Hiệp";
-export const BRIDE_FULL_NAME = "Ngọc Thị Hiệp";
+export const BRIDE_NAME = "Thanh Thư";
 // Mô tả ngắn về cô dâu
 export const BRIDE_DESCRIPTION = "Cô dâu xinh đẹp và dễ thương.";
 
 // Tên chú rể
-export const GROOM_NAME = "Minh Sơn";
-export const GROOM_FULL_NAME = "Nguyễn Minh Sơn";
+export const GROOM_NAME = "Mạnh Thắng";
 // Mô tả ngắn về chú rể
 export const GROOM_DESCRIPTION = "Chú rể đẹp trai và hài hước.";
 
@@ -26,7 +24,6 @@ export const GROOM_DESCRIPTION = "Chú rể đẹp trai và hài hước.";
     =========================== */
 // Ngày & địa điểm chính của đám cưới hiển thị trên hero
 export const WEDDING_DATE = "21/11/2025";
-export const WEDDING_VENUE = "Nhà hàng Tiệc cưới ABC, Hà Nội";
 // Mảng ảnh hiển thị trong hero (carousel/background)
 export const HERO_IMAGES = [
   "/images/gray-xy1.jpg",
@@ -136,6 +133,28 @@ export const GALLERY_IMAGES = [
   "/images/white-xy6.jpg",
   "/images/white-xy7.jpg",
 ];
+
+/* ===========================
+    Gift Box / Wedding Envelope (Hộp mừng cưới)
+    =========================== */
+// Tiêu đề modal hộp mừng cưới
+export const GIFT_BOX_TITLE =
+  "Gửi lời chúc qua hộp cưới tới cô dâu và chú rể!!!";
+export const GIFT_BOX_BUTTON_TEXT = "Gửi lời chúc qua hộp cưới";
+
+// Thông tin tài khoản cô dâu
+export const BRIDE_GIFT_TITLE = "Mừng Cưới Tới Cô Dâu";
+export const BRIDE_GIFT_QR_CODE = "/images/qrcode-bride.jpg";
+export const BRIDE_GIFT_BANK_NAME = "VietinBank CN BAC HAI PHONG - HOI SO";
+export const BRIDE_GIFT_ACCOUNT_NAME = "NGUYEN THI THANH THU";
+export const BRIDE_GIFT_ACCOUNT_NUMBER = "0398138501";
+
+// Thông tin tài khoản chú rể
+export const GROOM_GIFT_TITLE = "Mừng Cưới Tới Chú Rể";
+export const GROOM_GIFT_QR_CODE = "/images/qrcode-groom.jpg";
+export const GROOM_GIFT_BANK_NAME = "VietinBank CN BAC HAI PHONG - HOI SO";
+export const GROOM_GIFT_ACCOUNT_NAME = "NGUYEN MANH THANG";
+export const GROOM_GIFT_ACCOUNT_NUMBER = "100867657407";
 
 /* ===========================
     About / Story Stages (Các giai đoạn câu chuyện)

@@ -64,8 +64,8 @@ const FooterSection: React.FC = () => {
         {/* Copyright Text */}
         <div className="footer-item">
           <p className="text-sm text-wedding-light">
-            `© {new Date().getFullYear()} {GROOM_NAME} & {BRIDE_NAME}. All
-            rights reserved.`
+            © {new Date().getFullYear()} {GROOM_NAME} & {BRIDE_NAME}. All rights
+            reserved.
           </p>
         </div>
 
