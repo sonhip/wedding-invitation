@@ -9,7 +9,11 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import React, { useState } from "react";
 import { init, send } from "emailjs-com";
-init("engo7mL1i7oAzFIgy"); // Thay bằng Public Key của bạn
+import { emailjsConfig, validateEmailjsConfig } from "@/config/emailjs";
+
+// Khởi tạo EmailJS với Public Key từ environment variable
+validateEmailjsConfig();
+init(emailjsConfig.publicKey);
 
 const ConfirmModalButton: React.FC = () => {
   const [name, setName] = useState("");
@@ -41,7 +45,7 @@ const ConfirmModalButton: React.FC = () => {
     `,
     };
 
-    send("service_qvdyek7", "template_12xrwrp", emailParams)
+    send(emailjsConfig.serviceId, emailjsConfig.templateId, emailParams)
       .then(() => {
         toast({
           title: "Thông tin đã được gửi!",
