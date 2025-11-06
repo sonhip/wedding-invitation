@@ -10,12 +10,12 @@ import { Stage } from "@/pages/about-us-section";
     Basic Info (Tên & Mô tả)
     =========================== */
 // Tên cô dâu
-export const BRIDE_NAME = "Nguyễn Hương";
+export const BRIDE_NAME = "Thanh Thư";
 // Mô tả ngắn về cô dâu
 export const BRIDE_DESCRIPTION = "Cô dâu xinh đẹp và dễ thương.";
 
 // Tên chú rể
-export const GROOM_NAME = "Hữu Thành";
+export const GROOM_NAME = "Mạnh Thắng";
 // Mô tả ngắn về chú rể
 export const GROOM_DESCRIPTION = "Chú rể đẹp trai và thông minh.";
 
@@ -23,7 +23,7 @@ export const GROOM_DESCRIPTION = "Chú rể đẹp trai và thông minh.";
     Hero (Phần chính trang chủ)
     =========================== */
 // Ngày & địa điểm chính của đám cưới hiển thị trên hero
-export const WEDDING_DATE = "02.11.2025";
+export const WEDDING_DATE = "30/11/2025";
 export const WEDDING_LOCATION = "Thôn Dổ Thượng - Xã Nguyễn Lương Bằng";
 export const WEDDING_LOCATION_CITY = "TP. Hải Phòng";
 // Mảng ảnh hiển thị trong hero (carousel/background)
@@ -44,6 +44,13 @@ export const HERO_IMAGES = [
 // Ảnh đại diện cô dâu & chú rể dùng trong các section giới thiệu
 export const BRIDE_IMAGE = "/images/white-x.jpg";
 export const GROOM_IMAGE = "/images/white-y.jpg";
+
+// Thông tin invitation section
+export const INVITATION_TITLE = "THƯ MỜI THAM DỰ LỄ CƯỚI";
+export const INVITATION_SUBTITLE =
+  "Trân trọng kính mời đến dự lễ cưới của chúng tôi";
+export const INVITATION_STORY =
+  "Tình yêu của chúng mình là một hành trình đầy cảm xúc – nơi có những nụ cười rạng rỡ, những giọt nước mắt lăng thăm và cả những lần nắm chặt tay nhau qua bao thử thách. Sau tất cả, chúng mình đã chọn cùng nhau viết tiếp câu chuyện ấy bằng một cái kết thật đẹp bằng một đám cưới đầy yêu thương.";
 
 /* ===========================
     Countdown (Đếm ngược)

@@ -9,7 +9,7 @@ import GallerySection from "./pages/gallery-section";
 import HeroSection from "./pages/hero-section";
 import Calendar from "./pages/calendar";
 import ThankYouSection from "./pages/thank-you-section";
-import PeopleSection from "./pages/people-section";
+import BrideGroomSection from "./pages/bride-groom-section";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <FallingSnows>
         <HeroSection />
         <Calendar />
-        <PeopleSection />
+        <BrideGroomSection />
         <EventDetailsSection />
         <Carousel />
         <CountDownSection />

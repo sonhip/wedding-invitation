@@ -31,7 +31,7 @@ const Calendar = () => {
     { day: "", week: 0 },
     { day: "", week: 0 },
     { day: 1, week: 0 },
-    { day: 2, week: 0, highlight: true }, // Wedding day - Sunday
+    { day: 2, week: 0 },
     { day: 3, week: 1 },
     { day: 4, week: 1 },
     { day: 5, week: 1 },
@@ -59,7 +59,7 @@ const Calendar = () => {
     { day: 27, week: 4 },
     { day: 28, week: 4 },
     { day: 29, week: 4 },
-    { day: 30, week: 4 },
+    { day: 30, week: 4, highlight: true },
   ];
 
   return (
@@ -107,19 +107,26 @@ const Calendar = () => {
               >
                 {item.day ? (
                   item.highlight ? (
-                    // Wedding day with heart
+                    // Wedding day with animated heart icon containing the day number
                     <div className="relative w-full h-full flex items-center justify-center">
-                      <div className="absolute inset-0 bg-white rounded-lg md:rounded-xl flex items-center justify-center">
-                        <svg
-                          viewBox="0 0 100 100"
-                          className="w-full h-full p-1 fill-wedding-brown"
-                        >
-                          <path d="M50,90 C50,90 10,65 10,40 C10,25 20,15 32,15 C40,15 45,20 50,28 C55,20 60,15 68,15 C80,15 90,25 90,40 C90,65 50,90 50,90 Z" />
+                      <div
+                        className="relative w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20
+                                   flex items-center justify-center
+                                   transform transition-transform duration-300 ease-out
+                                   motion-safe:animate-pulse hover:scale-105"
+                        aria-label={`Wedding day ${item.day}`}
+                      >
+                        <svg viewBox="0 0 100 100" className="w-full h-full">
+                          <path
+                            d="M50,90 C50,90 10,65 10,40 C10,25 20,15 32,15 C40,15 45,20 50,28 C55,20 60,15 68,15 C80,15 90,25 90,40 C90,65 50,90 50,90 Z"
+                            className="fill-white"
+                          />
                         </svg>
+
+                        <span className="absolute inset-0 flex items-center justify-center text-wedding-brown font-bold text-sm md:text-base lg:text-lg pointer-events-none">
+                          {item.day}
+                        </span>
                       </div>
-                      <span className="relative z-20 text-wedding-brown font-bold text-xl md:text-2xl lg:text-3xl pointer-events-none">
-                        {item.day}
-                      </span>
                     </div>
                   ) : (
                     // Regular day
