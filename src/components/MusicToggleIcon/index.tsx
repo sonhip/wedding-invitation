@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { HiMusicNote, HiVolumeOff } from "react-icons/hi";
 
 const MusicToggleIcon: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -19,27 +18,22 @@ const MusicToggleIcon: React.FC = () => {
 
   return (
     <div
-      className="fixed bottom-4 z-[999] left-4 p-2 bg-wedding-deep rounded-full shadow-lg cursor-pointer transition-all duration-300 flex items-center space-x-2"
+      className={`fixed bottom-4 z-[999] left-4 p-3 bg-wedding-brown rounded-full border-2 border-white shadow-lg cursor-pointer transition-all duration-300 hover:scale-110 ${
+        isPlaying ? "ring-4 ring-white/30 animate-pulse" : ""
+      }`}
       onClick={toggleMusic}
     >
-      <div
-        className={`bars-container ${
-          isPlaying ? "bars-active" : "bars-paused"
+      <img
+        src={
+          isPlaying
+            ? "/images/boxes/on-music.svg"
+            : "/images/boxes/off-music.svg"
+        }
+        alt={isPlaying ? "Music On" : "Music Off"}
+        className={`w-8 h-8 transition-all duration-300 ${
+          isPlaying ? "animate-bounce" : ""
         }`}
-      >
-        {[...Array(5)].map((_, i) => (
-          <div
-            key={i}
-            className="bar"
-            style={{ animationDelay: `${i * 0.1}s` }}
-          ></div>
-        ))}
-      </div>
-      {isPlaying ? (
-        <HiMusicNote className="text-white text-3xl" />
-      ) : (
-        <HiVolumeOff className="text-white text-3xl" />
-      )}
+      />
       <audio
         loop
         ref={audioRef}
