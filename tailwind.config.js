@@ -4,6 +4,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"EB Garamond"', "system-ui", "sans-serif"],
+        serif: ['"EB Garamond"', "serif"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -54,7 +58,7 @@ export default {
           light: "#FFDFD6", // Màu nền nhẹ
           pink: "#E3A5C7", // Màu hồng
           purple: "#B692C2", // Màu tím nhạt
-          deep: "#694F8E", // Màu tím đậm
+          deep: "rgba(253,247,237,1.000)", // Màu tím đậm
         },
         fontSize: {
           xs: ["0.75rem", "1rem"], // 12px, line-height 16px
