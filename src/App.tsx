@@ -19,7 +19,7 @@ function App() {
         <PeopleSection />
         <AboutUsSection />
         <EventDetailsSection />
-        {/* <Carousel /> */}
+        <Carousel />
         <GallerySection />
         <CountDownSection />
         <ThankYouSection />

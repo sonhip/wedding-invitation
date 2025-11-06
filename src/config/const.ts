@@ -94,6 +94,16 @@ export const THANK_YOU_MESSAGE_2 =
     =========================== */
 // Tiêu đề phần album và danh sách ảnh hiển thị trong gallery
 export const GALLERY_TITLE = "Album Hình Cưới";
+export const GALLERY_CAROUSEL = [
+  "/images/gray-xy1.jpg",
+  "/images/pink-xy1.jpg",
+  "/images/white-xy1.jpg",
+  "/images/red-xy1.jpg",
+  "/images/gray-xy2.jpg",
+  "/images/pink-xy2.jpg",
+  "/images/white-xy2.jpg",
+  "/images/red-xy2.jpg",
+];
 export const GALLERY_IMAGES = [
   "/images/gray-xy1.jpg",
   "/images/gray-xy2.jpg",

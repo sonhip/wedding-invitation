@@ -1,17 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./styles.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-const galleryImages = [
-  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/yhbbxsdprkdvt06lfmab.jpg",
-  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/csmz2fnpteftwep4lp1c.jpg",
-  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/q3y4egkv3uucmmwtacko.jpg",
-  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/j7conscc0ni2kiphsmum.jpg",
-  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404783/wedding-images/jwxl6cxkkllqsrvkss43.jpg",
-  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404783/wedding-images/v6eleejskl4fukahl2xc.jpg",
-  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404783/wedding-images/c7p4dxgj1xy51jgkvmta.jpg",
-  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/csmz2fnpteftwep4lp1c.jpg",
-];
+import { GALLERY_CAROUSEL } from "@/config/const";
 
 const RotatingBox: React.FC = () => {
   const [degrees, setDegrees] = useState(0);
@@ -70,7 +60,7 @@ const RotatingBox: React.FC = () => {
         className="box relative w-52 h-52 sm:w-72 sm:h-72"
         style={{ transform: `perspective(1000px) rotateY(${degrees}deg)` }}
       >
-        {galleryImages.map((image, index) => (
+        {GALLERY_CAROUSEL.map((image, index) => (
           <span
             key={index}
             style={{
