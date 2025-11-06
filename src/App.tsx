@@ -9,6 +9,7 @@ import Calendar from "./pages/calendar";
 import ThankYouSection from "./pages/thank-you-section";
 import BrideGroomSection from "./pages/bride-groom-section";
 import GatherSection from "./pages/gather-section";
+import EventSection from "./pages/event-section";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Calendar />
         <BrideGroomSection />
         <GatherSection />
+        <EventSection />
         <CountDownSection />
         <GallerySection />
         <ThankYouSection />

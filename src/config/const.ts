@@ -69,18 +69,37 @@ export const BRIDE_PARENTS_TITLE = "NHÀ GÁI";
 export const BRIDE_FATHER_NAME = "ÔNG: NGUYỄN QUANG TUYỂN";
 export const BRIDE_MOTHER_NAME = "BÀ: VŨ THỊ LIÊN";
 export const BRIDE_EVENT_LOCATION =
-  "Thôn Dổ Thượng, Xã Nguyễn Lương Bằng, TP. Hải Phòng";
+  "Thôn An Cố Nam, xã An Tân, huyện Thái Thuỵ, tỉnh Thái Bình";
 
 /* ---- Nhà trai ---- */
 export const GROOM_PARENTS_TITLE = "NHÀ TRAI";
 export const GROOM_FATHER_NAME = "ÔNG: VŨ HỮU MINH";
 export const GROOM_MOTHER_NAME = "BÀ: VŨ THỊ NGOÂN";
 export const GROOM_EVENT_LOCATION =
-  "Thôn Dổ Hạ, Xã Nguyễn Lương Bằng, TP. Hải Phòng";
+  "thôn Dổ Hạ, xã Nguyễn Lương Bằng, TP. Hải Phòng";
 
 // Legacy constants (giữ lại để không break code cũ)
 export const EVENT_SECTION_DESCRIPTION =
   "Tình yêu đích thực đứng về phía nhau trong những ngày tốt đẹp và sát cánh hơn trong những ngày mệt mỏi.";
+
+// Event details constants
+export const EVENT_CEREMONY_TITLE = "HÔN LỄ ĐƯỢC TỔ CHỨC VÀO LÚC";
+export const EVENT_TIME = "10 GIỜ 40";
+export const EVENT_DATE_DAY = "30";
+export const EVENT_DATE_MONTH = "11";
+export const EVENT_DATE_YEAR = "25";
+export const EVENT_DAY_NAME = "CHỦ NHẬT";
+export const EVENT_LUNAR_DATE = "(Tức ngày 11 tháng 10 năm Ất Tỵ)";
+export const EVENT_LOCATION_TITLE = "Địa Điểm";
+export const EVENT_LOCATION_VENUE = "TẠI TƯ GIA NHÀ GÁI";
+export const EVENT_LOCATION_ADDRESS =
+  "Thôn An cố Nam, Xã An Tân, Huyện Thái Thuỵ";
+export const EVENT_LOCATION_CITY = "Tỉnh Thái Bình";
+export const EVENT_INVITATION_TEXT =
+  "Chúng Tôi Rất Hân Hạnh Được Mời Quý Vị Đến Tham Dự";
+export const EVENT_INVITATION_HIGHLIGHT = "Buổi Tiệc Chung Vui";
+export const EVENT_INVITATION_FOOTER = "Cùng Gia Đình Chúng Tôi";
+
 export const BRIDE_EVENT_TITLE = "Tiệc nhà gái được tổ chức vào";
 export const BRIDE_EVENT_DATE = "30/11/2025";
 export const BRIDE_EVENT_TIME = "10h40";

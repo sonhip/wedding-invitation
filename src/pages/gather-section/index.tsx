@@ -69,7 +69,7 @@ const GatherSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="gather-section bg-wedding-cream py-16 pt-0 md:py-24 px-6">
+    <section className="gather-section bg-wedding-cream py-0 md:py-24 px-6">
       <div className="max-w-5xl mx-auto">
         {/* Title with left border and image aligned horizontally */}
         <div className="gather-title mb-8 md:mb-12">
