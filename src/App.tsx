@@ -7,16 +7,17 @@ import EventDetailsSection from "./pages/event-details-section";
 import FooterSection from "./pages/footer-section";
 import GallerySection from "./pages/gallery-section";
 import HeroSection from "./pages/hero-section";
-import PeopleSection from "./pages/people-section";
+import Calendar from "./pages/calendar";
 import ThankYouSection from "./pages/thank-you-section";
+import PeopleSection from "./pages/people-section";
 
 function App() {
   return (
     <div className="min-h-screen">
       <FallingSnows>
         <HeroSection />
+        <Calendar />
         <PeopleSection />
-        {/* <AboutUsSection /> */}
         <EventDetailsSection />
         <Carousel />
         <CountDownSection />
