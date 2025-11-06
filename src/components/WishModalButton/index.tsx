@@ -72,16 +72,16 @@ const WishModalButton: React.FC = () => {
 
   return (
     <Dialog>
-      <DialogTrigger className="btn mt-8 px-6 py-3 bg-wedding-deep text-wedding-light text-lg md:text-xl font-semibold rounded-lg transition">
+      <DialogTrigger className="btn mt-8 px-6 py-3 bg-wedding-brown text-white text-lg md:text-xl font-semibold rounded-lg hover:bg-wedding-brown/90 transition">
         Gửi Lời Chúc
       </DialogTrigger>
 
-      <DialogContent className="bg-white p-4 sm:p-6 rounded-lg shadow-xl max-w-[95vw] sm:max-w-md mx-auto max-h-[90vh] overflow-y-auto">
+      <DialogContent className="bg-wedding-cream p-4 sm:p-6 rounded-lg shadow-xl max-w-[95vw] sm:max-w-md mx-auto max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-xl sm:text-2xl font-semibold text-wedding-deep">
+          <DialogTitle className="text-xl sm:text-2xl font-semibold text-wedding-brown">
             Hãy để lại những lời chúc tốt đẹp dành cho cô dâu và chú rể
           </DialogTitle>
-          <DialogDescription className="text-wedding-purple mt-2 sm:mt-4 text-sm sm:text-base">
+          <DialogDescription className="text-wedding-brown/70 mt-2 sm:mt-4 text-sm sm:text-base">
             Vui lòng điền tên và lời chúc của bạn cho cô dâu và chú rể.
           </DialogDescription>
         </DialogHeader>
@@ -93,14 +93,14 @@ const WishModalButton: React.FC = () => {
           <div>
             <label
               htmlFor="name"
-              className="block text-wedding-deep font-medium text-sm sm:text-base"
+              className="block text-wedding-brown font-medium text-sm sm:text-base"
             >
               Tên của bạn
             </label>
             <input
               type="text"
               id="name"
-              className="mt-2 p-2 sm:p-3 w-full border border-wedding-purple rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep text-base"
+              className="mt-2 p-2 sm:p-3 w-full border border-wedding-brown/30 rounded-lg focus:ring-2 bg-white focus:ring-wedding-brown text-base"
               placeholder="Nhập tên của bạn"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -110,13 +110,13 @@ const WishModalButton: React.FC = () => {
           <div>
             <label
               htmlFor="message"
-              className="block text-wedding-deep font-medium text-sm sm:text-base"
+              className="block text-wedding-brown font-medium text-sm sm:text-base"
             >
               Lời chúc của bạn
             </label>
             <textarea
               id="message"
-              className="mt-2 p-2 sm:p-3 w-full h-24 sm:h-32 border border-wedding-purple bg-transparent rounded-lg focus:ring-2 focus:ring-wedding-deep text-base"
+              className="mt-2 p-2 sm:p-3 w-full h-24 sm:h-32 border border-wedding-brown/30 bg-white rounded-lg focus:ring-2 focus:ring-wedding-brown text-base"
               placeholder="Nhập lời chúc của bạn"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
@@ -126,7 +126,7 @@ const WishModalButton: React.FC = () => {
           <div className="mt-4 sm:mt-6 flex justify-end">
             <button
               type="submit"
-              className="px-4 sm:px-6 py-2 bg-wedding-deep text-wedding-light text-base sm:text-lg font-semibold rounded-lg hover:bg-wedding-deep/90 transition-colors"
+              className="px-4 sm:px-6 py-2 bg-wedding-brown text-white text-base sm:text-lg font-semibold rounded-lg hover:bg-wedding-brown/90 transition-colors"
             >
               Gửi Lời Chúc
             </button>

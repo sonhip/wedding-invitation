@@ -83,14 +83,14 @@ const GallerySection: React.FC = () => {
   };
 
   return (
-    <section className="bg-wedding-light py-16 px-4 md:px-6">
+    <section className="bg-wedding-cream py-16 px-4 md:px-6">
       <div className="max-w-7xl mx-auto text-center">
         {/* Gallery Title */}
         <div className="mb-8 md:mb-12">
-          <h2 className="gallery-title text-wedding-deep text-3xl md:text-4xl lg:text-5xl font-bold">
+          <h2 className="gallery-title text-wedding-brown text-3xl md:text-4xl lg:text-5xl font-bold">
             {GALLERY_TITLE}
           </h2>
-          <p className="text-wedding-purple mt-3 text-sm md:text-base">
+          <p className="text-wedding-brown/70 mt-3 text-sm md:text-base">
             Nhấn vào ảnh để xem kích thước lớn hơn
           </p>
         </div>
@@ -111,7 +111,7 @@ const GallerySection: React.FC = () => {
                   loading="lazy"
                 />
                 {/* Overlay effect on hover */}
-                <div className="absolute inset-0 bg-wedding-deep/0 group-hover:bg-wedding-deep/20 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-wedding-brown/0 group-hover:bg-wedding-brown/20 transition-all duration-300 flex items-center justify-center">
                   <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl">
                     🔍
                   </span>

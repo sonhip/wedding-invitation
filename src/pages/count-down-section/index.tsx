@@ -65,11 +65,11 @@ const CountDownSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-wedding-light py-16 px-6 min-h-96">
+    <section className="bg-wedding-brown py-16 px-6 min-h-96">
       <div className="max-w-6xl mx-auto text-center">
         {/* Countdown Title */}
         <div className="countdown-title">
-          <h2 className="text-wedding-deep text-3xl md:text-4xl font-bold">
+          <h2 className="text-white text-3xl md:text-4xl font-bold">
             {COUNTDOWN_TITLE}
           </h2>
         </div>
@@ -92,28 +92,28 @@ const CountDownSection: React.FC = () => {
               <div className="text-center">
                 <div className="flex justify-center gap-6">
                   <div className="countdown-item">
-                    <span className="block text-4xl md:text-5xl font-bold text-wedding-deep">
+                    <span className="block text-4xl md:text-5xl font-bold text-white">
                       {days}
                     </span>
-                    <span className="text-lg text-wedding-deep">Ngày</span>
+                    <span className="text-lg text-white/80">Ngày</span>
                   </div>
                   <div className="countdown-item">
-                    <span className="block text-4xl md:text-5xl font-bold text-wedding-deep">
+                    <span className="block text-4xl md:text-5xl font-bold text-white">
                       {hours}
                     </span>
-                    <span className="text-lg text-wedding-deep">Giờ</span>
+                    <span className="text-lg text-white/80">Giờ</span>
                   </div>
                   <div className="countdown-item">
-                    <span className="block text-4xl md:text-5xl font-bold text-wedding-deep">
+                    <span className="block text-4xl md:text-5xl font-bold text-white">
                       {minutes}
                     </span>
-                    <span className="text-lg text-wedding-deep">Phút</span>
+                    <span className="text-lg text-white/80">Phút</span>
                   </div>
                   <div className="countdown-item">
-                    <span className="block text-4xl md:text-5xl font-bold text-wedding-deep">
+                    <span className="block text-4xl md:text-5xl font-bold text-white">
                       {seconds}
                     </span>
-                    <span className="text-lg text-wedding-deep">Giây</span>
+                    <span className="text-lg text-white/80">Giây</span>
                   </div>
                 </div>
               </div>

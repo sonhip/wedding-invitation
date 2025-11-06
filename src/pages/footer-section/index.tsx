@@ -31,7 +31,7 @@ const FooterSection: React.FC = () => {
   };
 
   return (
-    <section className="footer-section bg-wedding-deep text-wedding-light py-8">
+    <section className="footer-section bg-wedding-cream text-wedding-brown py-8">
       <div className="container mx-auto text-center">
         {/* Social Media Icons */}
         {/* <div className="footer-item mb-8 flex justify-center gap-6">
@@ -63,7 +63,7 @@ const FooterSection: React.FC = () => {
 
         {/* Copyright Text */}
         <div className="footer-item">
-          <p className="text-sm text-wedding-light">
+          <p className="text-sm text-wedding-brown">
             © {new Date().getFullYear()} {GROOM_NAME} & {BRIDE_NAME}. All rights
             reserved.
           </p>
@@ -73,7 +73,7 @@ const FooterSection: React.FC = () => {
         <button
           id="scrollToTopButton"
           onClick={handleScrollToTop}
-          className="fixed bottom-8 right-8 bg-wedding-light text-wedding-purple p-4 rounded-full shadow-lg transition-all duration-300 hidden"
+          className="fixed bottom-8 right-8 bg-wedding-cream text-wedding-brown p-4 rounded-full shadow-lg transition-all duration-300 hidden"
         >
           ↑
         </button>

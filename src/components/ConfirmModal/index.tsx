@@ -71,16 +71,16 @@ const ConfirmModalButton: React.FC = () => {
 
   return (
     <Dialog>
-      <DialogTrigger className="btn mt-8 px-6 py-3 bg-wedding-deep text-wedding-light text-lg md:text-xl font-semibold rounded-lg transition">
+      <DialogTrigger className="btn mt-8 px-6 py-3 bg-wedding-cream text-wedding-brown text-lg md:text-xl font-semibold rounded-lg hover:bg-wedding-cream/90 transition">
         Xác nhận tham gia
       </DialogTrigger>
 
-      <DialogContent className="bg-white p-4 sm:p-6 rounded-lg shadow-xl max-w-[95vw] sm:max-w-md mx-auto max-h-[90vh] overflow-y-auto">
+      <DialogContent className="bg-wedding-cream p-4 sm:p-6 rounded-lg shadow-xl max-w-[95vw] sm:max-w-md mx-auto max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-xl sm:text-2xl font-semibold text-wedding-deep">
+          <DialogTitle className="text-xl sm:text-2xl font-semibold text-wedding-brown">
             Xác nhận thông tin của bạn
           </DialogTitle>
-          <DialogDescription className="text-wedding-purple mt-2 sm:mt-4 text-sm sm:text-base">
+          <DialogDescription className="text-wedding-brown/80 mt-2 sm:mt-4 text-sm sm:text-base">
             Vui lòng điền tên, số điện thoại và ghi chú (nếu có) của bạn.
           </DialogDescription>
         </DialogHeader>
@@ -92,14 +92,14 @@ const ConfirmModalButton: React.FC = () => {
           <div>
             <label
               htmlFor="name"
-              className="block text-wedding-deep font-medium text-sm sm:text-base"
+              className="block text-wedding-brown font-medium text-sm sm:text-base"
             >
               Tên của bạn
             </label>
             <input
               type="text"
               id="name"
-              className="mt-2 p-2 sm:p-3 w-full border border-wedding-purple rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep text-base"
+              className="mt-2 p-2 sm:p-3 w-full border border-wedding-brown/20 rounded-lg focus:ring-2 bg-white focus:ring-wedding-brown text-base"
               placeholder="Nhập tên của bạn"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -109,14 +109,14 @@ const ConfirmModalButton: React.FC = () => {
           <div>
             <label
               htmlFor="phone"
-              className="block text-wedding-deep font-medium text-sm sm:text-base"
+              className="block text-wedding-brown font-medium text-sm sm:text-base"
             >
               Số điện thoại
             </label>
             <input
               type="text"
               id="phone"
-              className="mt-2 p-2 sm:p-3 w-full border border-wedding-purple rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep text-base"
+              className="mt-2 p-2 sm:p-3 w-full border border-wedding-brown/20 rounded-lg focus:ring-2 bg-white focus:ring-wedding-brown text-base"
               placeholder="Nhập số điện thoại của bạn"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
@@ -126,13 +126,13 @@ const ConfirmModalButton: React.FC = () => {
           <div>
             <label
               htmlFor="note"
-              className="block text-wedding-deep font-medium text-sm sm:text-base"
+              className="block text-wedding-brown font-medium text-sm sm:text-base"
             >
               Ghi chú (nếu có)
             </label>
             <textarea
               id="note"
-              className="mt-2 p-2 sm:p-3 w-full h-24 sm:h-32 border border-wedding-purple bg-transparent rounded-lg focus:ring-2 focus:ring-wedding-deep text-base"
+              className="mt-2 p-2 sm:p-3 w-full h-24 sm:h-32 border border-wedding-brown/20 bg-white rounded-lg focus:ring-2 focus:ring-wedding-brown text-base"
               placeholder="Nhập ghi chú của bạn"
               value={note}
               onChange={(e) => setNote(e.target.value)}
@@ -142,7 +142,7 @@ const ConfirmModalButton: React.FC = () => {
           <div className="mt-4 sm:mt-6 flex justify-end">
             <button
               type="submit"
-              className="px-4 sm:px-6 py-2 bg-wedding-deep text-wedding-light text-base sm:text-lg font-semibold rounded-lg hover:bg-wedding-deep/90 transition-colors"
+              className="px-4 sm:px-6 py-2 bg-wedding-brown text-white text-base sm:text-lg font-semibold rounded-lg hover:bg-wedding-brown/90 transition-colors"
             >
               Xác Nhận
             </button>
