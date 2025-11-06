@@ -74,7 +74,7 @@ const PeopleSection = () => {
             <img
               src={BRIDE_IMAGE}
               alt="Cô Dâu"
-              className="person-image w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg mb-6"
+              className="person-image w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg mb-6 object-top"
             />
             <h3 className="person-info text-2xl font-semibold text-wedding-deep mb-2">
               {BRIDE_NAME}
@@ -89,7 +89,7 @@ const PeopleSection = () => {
             <img
               src={GROOM_IMAGE}
               alt="Chú Rể"
-              className="person-image w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg mb-6"
+              className="person-image w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg mb-6 object-top"
             />
             <h3 className="person-info text-2xl font-semibold text-wedding-deep mb-2">
               {GROOM_NAME}

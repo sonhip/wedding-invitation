@@ -13,7 +13,6 @@ import {
   GROOM_EVENT_DATE,
   GROOM_EVENT_TIME,
   GROOM_EVENT_LOCATION,
-  GROOM_EVENT_LOCATION_DETAIL,
   GROOM_EVENT_MAP_LINK,
 } from "@/config/const";
 
@@ -194,8 +193,7 @@ const EventDetailsSection: React.FC = () => {
               Giờ: {GROOM_EVENT_TIME}
             </p>
             <p className="text-wedding-light text-lg">
-              Địa điểm: {GROOM_EVENT_LOCATION} <br />
-              {GROOM_EVENT_LOCATION_DETAIL}
+              Địa điểm: {GROOM_EVENT_LOCATION}
             </p>
             <div className="flex space-x-4">
               <button

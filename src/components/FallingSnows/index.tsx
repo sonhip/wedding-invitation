@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 const FallingSnows = ({ children }: any) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const flakes: any[] = [];
-  const flakeCount = 99;
+  const flakeCount = 200;
   let mX = -100;
   let mY = -100;
 

@@ -19,7 +19,7 @@ const MusicToggleIcon: React.FC = () => {
 
   return (
     <div
-      className="fixed bottom-4 z-[999] left-4 p-4 bg-wedding-deep rounded-full shadow-lg cursor-pointer transition-all duration-300 flex items-center space-x-2"
+      className="fixed bottom-4 z-[999] left-4 p-2 bg-wedding-deep rounded-full shadow-lg cursor-pointer transition-all duration-300 flex items-center space-x-2"
       onClick={toggleMusic}
     >
       <div

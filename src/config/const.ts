@@ -17,13 +17,13 @@ export const BRIDE_DESCRIPTION = "Cô dâu xinh đẹp và dễ thương.";
 // Tên chú rể
 export const GROOM_NAME = "Mạnh Thắng";
 // Mô tả ngắn về chú rể
-export const GROOM_DESCRIPTION = "Chú rể đẹp trai và hài hước.";
+export const GROOM_DESCRIPTION = "Chú rể đẹp trai và thông minh.";
 
 /* ===========================
     Hero (Phần chính trang chủ)
     =========================== */
 // Ngày & địa điểm chính của đám cưới hiển thị trên hero
-export const WEDDING_DATE = "21/11/2025";
+export const WEDDING_DATE = "30/11/2025";
 // Mảng ảnh hiển thị trong hero (carousel/background)
 export const HERO_IMAGES = [
   "/images/gray-xy1.jpg",
@@ -60,22 +60,20 @@ export const EVENT_SECTION_DESCRIPTION =
 /* ---- Tiệc nhà gái ---- */
 // Tiêu đề, ngày giờ, địa điểm và link bản đồ cho tiệc nhà gái
 export const BRIDE_EVENT_TITLE = "Tiệc nhà gái được tổ chức vào";
-export const BRIDE_EVENT_DATE = "14/03/2025";
-export const BRIDE_EVENT_TIME = "16:00";
+export const BRIDE_EVENT_DATE = "30/11/2025";
+export const BRIDE_EVENT_TIME = "10h40";
 export const BRIDE_EVENT_LOCATION =
-  "Đội 1 - Thôn An Tân - Xã Gia Phúc - Huyện Gia Lộc - Tỉnh Hải Dương";
-export const BRIDE_EVENT_MAP_LINK = "https://maps.app.goo.gl/k2M6ofqWPnT7zGP78";
+  "thôn An Cố Nam, xã An Tân, huyện Thái Thuỵ, tỉnh Thái Bình";
+export const BRIDE_EVENT_MAP_LINK = "https://maps.app.goo.gl/PmmosgLui9XWDGJp6";
 
 /* ---- Tiệc nhà trai ---- */
 // Tiêu đề, ngày giờ, địa điểm và link bản đồ cho tiệc nhà trai
 export const GROOM_EVENT_TITLE = "Tiệc nhà trai được tổ chức vào";
-export const GROOM_EVENT_DATE = "15/03/2025";
-export const GROOM_EVENT_TIME = "11:00";
+export const GROOM_EVENT_DATE = "30/11/2025";
+export const GROOM_EVENT_TIME = "13h30";
 export const GROOM_EVENT_LOCATION =
-  "Trung tâm tiệc cưới Trống Đồng Place Hoàng Gia";
-export const GROOM_EVENT_LOCATION_DETAIL =
-  "Phòng Hoàng Gia tầng 1, số 172 Trường Chinh - Tân Bình - TP.Hải Dương";
-export const GROOM_EVENT_MAP_LINK = "https://maps.app.goo.gl/2v3SzqCLtpCtCCom8";
+  "thôn Chè núi, xã Liên Bão, huyện Tiên Du, tỉnh Bắc Ninh";
+export const GROOM_EVENT_MAP_LINK = "https://maps.app.goo.gl/tdL5wGEa2q3qEdRy9";
 
 /* ===========================
     Thank You (Lời cảm ơn)
@@ -174,9 +172,9 @@ export const STAGES: Stage[] = [
     image: "/public/images/white-y.jpg",
   },
   {
-    title: "15/03/2025 và sau nữa",
+    title: "30/11/2025 và sau nữa",
     description:
-      'Ngày chung đôi. Câu chuyện khởi đầu vào mùa xuân, nên chúng mình muốn viết nên một cái kết hạnh phúc vào mùa đông. Để mùa xuân tiếp theo, chúng mình sẽ cùng nhau viết nên một câu chuyện khác, nhưng giờ với một vai trò mới, là "Vợ", là "Chồng". Vào ngày 15/03/2025 tới này, mong bạn đến chung vui và cùng chứng kiến cái kết hạnh phúc cho câu chuyện chúng mình, và cùng nhau mở ra một hành trình mới nhé!',
+      'Ngày chung đôi. Câu chuyện khởi đầu vào mùa xuân, nên chúng mình muốn viết nên một cái kết hạnh phúc vào mùa đông. Để mùa xuân tiếp theo, chúng mình sẽ cùng nhau viết nên một câu chuyện khác, nhưng giờ với một vai trò mới, là "Vợ", là "Chồng". Vào ngày 30/11/2025 tới này, mong bạn đến chung vui và cùng chứng kiến cái kết hạnh phúc cho câu chuyện chúng mình, và cùng nhau mở ra một hành trình mới nhé!',
     image: "/public/images/white-xy3.jpg",
   },
 ];

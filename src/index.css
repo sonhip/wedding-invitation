@@ -141,10 +141,6 @@
   animation: bounce 0.6s infinite alternate ease-in-out;
 }
 
-.bars-paused .bar {
-  height: 24px !important;
-}
-
 @keyframes bounce {
   0% {
     height: 10px;
