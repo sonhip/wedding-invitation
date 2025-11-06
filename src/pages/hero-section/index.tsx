@@ -65,7 +65,7 @@ const HeroSection = () => {
           style={{ textShadow: "0 4px 6px rgba(0, 0, 0, 0.3)" }}
           className="hero-subtitle text-wedding-deep text-2xl md:text-3xl lg:text-4xl mt-8 leading-relaxed"
         >
-          {WEDDING_DATE}
+          <b>{WEDDING_DATE}</b>
         </p>
 
         <WishModalButton />

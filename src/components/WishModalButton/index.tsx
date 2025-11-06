@@ -100,7 +100,7 @@ const WishModalButton: React.FC = () => {
             <input
               type="text"
               id="name"
-              className="mt-2 p-2 sm:p-3 w-full border border-wedding-purple rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep text-sm sm:text-base"
+              className="mt-2 p-2 sm:p-3 w-full border border-wedding-purple rounded-lg focus:ring-2 bg-transparent focus:ring-wedding-deep text-base"
               placeholder="Nhập tên của bạn"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -116,7 +116,7 @@ const WishModalButton: React.FC = () => {
             </label>
             <textarea
               id="message"
-              className="mt-2 p-2 sm:p-3 w-full h-24 sm:h-32 border border-wedding-purple bg-transparent rounded-lg focus:ring-2 focus:ring-wedding-deep text-sm sm:text-base"
+              className="mt-2 p-2 sm:p-3 w-full h-24 sm:h-32 border border-wedding-purple bg-transparent rounded-lg focus:ring-2 focus:ring-wedding-deep text-base"
               placeholder="Nhập lời chúc của bạn"
               value={message}
               onChange={(e) => setMessage(e.target.value)}

@@ -14,18 +14,18 @@ import {
   GROOM_EVENT_TIME,
   GROOM_EVENT_LOCATION,
   GROOM_EVENT_MAP_LINK,
+  GALLERY_CAROUSEL,
 } from "@/config/const";
 
-// Đăng ký plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
 const EventDetailsSection: React.FC = () => {
-  const [backgroundImage] = useState<string>("");
+  const [backgroundImage, setBackgroundImage] = useState<string>(
+    GALLERY_CAROUSEL[0]
+  );
 
-  //res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/csmz2fnpteftwep4lp1c.jpg
-
-  https: useEffect(() => {
-    // GSAP Scroll Animation cho phần Event Details
+  useEffect(() => {
+    // GSAP Scroll animations
     gsap.fromTo(
       ".event-title",
       { opacity: 0, y: 50 },
@@ -68,50 +68,67 @@ const EventDetailsSection: React.FC = () => {
       }
     );
 
-    // // GSAP animation for changing background images
-    // const interval = setInterval(() => {
-    //   // Animate background change
-    //   gsap.to(".background-image", {
-    //     opacity: 0,
-    //     duration: 1,
-    //     onComplete: () => {
-    //       // Update the background image after fade out
-    //       setBackgroundImage((prevImage) => {
-    //         const currentIndex = images.indexOf(prevImage);
-    //         const nextIndex = (currentIndex + 1) % images.length;
-    //         return images[nextIndex];
-    //       });
+    // Background rotation
+    const interval = setInterval(() => {
+      // fade out
+      gsap.to(".background-image", {
+        opacity: 0,
+        duration: 1,
+        onComplete: () => {
+          // update image
+          setBackgroundImage((prev) => {
+            const currentIndex = GALLERY_CAROUSEL.indexOf(prev);
+            const nextIndex = (currentIndex + 1) % GALLERY_CAROUSEL.length;
+            return GALLERY_CAROUSEL[nextIndex];
+          });
+          // fade in
+          gsap.to(".background-image", {
+            opacity: 1,
+            duration: 1,
+          });
+        },
+      });
+    }, 3000);
 
-    //       // Fade in the new background image
-    //       gsap.to(".background-image", {
-    //         opacity: 1,
-    //         duration: 1,
-    //       });
-    //     },
-    //   });
-    // }, 3000); // Change background every 3 seconds
+    return () => {
+      clearInterval(interval);
+      // optional: kill ScrollTriggers created by this component
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
+  }, []); // images is stable here (constant within component)
 
-    // // Dọn dẹp interval khi component unmount
-    // return () => clearInterval(interval);
-  }, []);
-
-  // GSAP hover animations for buttons
+  // hover animations for .btn with cleanup
   useEffect(() => {
-    gsap.utils.toArray(".btn").forEach((btn) => {
+    const btns = gsap.utils.toArray(".btn") as HTMLElement[];
+    const handlers: Array<{
+      el: HTMLElement;
+      enter: EventListenerOrEventListenerObject;
+      leave: EventListenerOrEventListenerObject;
+    }> = [];
+
+    btns.forEach((btn) => {
       const tl = gsap.timeline({ paused: true });
       tl.to(btn as HTMLElement, {
         scale: 1.1,
         duration: 0.2,
         ease: "power1.out",
       });
-      (btn as HTMLElement).addEventListener("mouseenter", () => tl.play());
-      (btn as HTMLElement).addEventListener("mouseleave", () => tl.reverse());
+      const enter = () => tl.play();
+      const leave = () => tl.reverse();
+      btn.addEventListener("mouseenter", enter);
+      btn.addEventListener("mouseleave", leave);
+      handlers.push({ el: btn, enter, leave });
     });
+
+    return () =>
+      handlers.forEach((h) => {
+        h.el.removeEventListener("mouseenter", h.enter);
+        h.el.removeEventListener("mouseleave", h.leave);
+      });
   }, []);
 
   return (
     <section className="bg-wedding-light py-16 px-6 relative min-h-[450px]">
-      {/* Background Image */}
       <div
         className="background-image absolute inset-0 bg-cover bg-center opacity-100"
         style={{
@@ -119,11 +136,9 @@ const EventDetailsSection: React.FC = () => {
         }}
       ></div>
 
-      {/* Overlay for better text visibility */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <div className="max-w-6xl mx-auto space-y-8 relative z-10">
-        {/* Event Title */}
         <div>
           <h2
             className="event-title text-wedding-light text-3xl md:text-4xl font-bold text-center"
@@ -133,7 +148,6 @@ const EventDetailsSection: React.FC = () => {
           </h2>
         </div>
 
-        {/* Event Description */}
         <div className="event-description">
           <p
             className="text-wedding-light text-lg mt-4 leading-relaxed text-center"
@@ -143,7 +157,6 @@ const EventDetailsSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Event Details */}
         <div className="event-details grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-4">
             <h3
@@ -168,14 +181,6 @@ const EventDetailsSection: React.FC = () => {
               >
                 Hướng dẫn đi
               </button>
-              {/* <button
-                className="btn bg-wedding-deep text-wedding-light px-6 py-2 rounded shadow-lg"
-                onClick={() =>
-                  alert("Đã thêm vào lịch! (Chưa tích hợp với lịch thực tế)")
-                }
-              >
-                Thêm vào lịch
-              </button> */}
             </div>
           </div>
 
@@ -202,14 +207,6 @@ const EventDetailsSection: React.FC = () => {
               >
                 Hướng dẫn đi
               </button>
-              {/* <button
-                className="btn bg-wedding-deep text-wedding-light px-6 py-2 rounded shadow-lg"
-                onClick={() =>
-                  alert("Đã thêm vào lịch! (Chưa tích hợp với lịch thực tế)")
-                }
-              >
-                Thêm vào lịch
-              </button> */}
             </div>
           </div>
         </div>
