@@ -1,14 +1,14 @@
 import { useEffect, useRef } from "react";
 
-const FallingSnows = ({ children }: any) => {
+const FallingPetals = ({ children }: any) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const flakes: any[] = [];
-  const flakeCount = 200;
+  const petalsRef = useRef<any[]>([]);
+  const petalCount = 99; // Ít hơn tuyết để nhẹ nhàng hơn
   let mX = -100;
   let mY = -100;
 
-  // Snow animation function
-  function snow() {
+  // Spring petals animation function
+  function animatePetals() {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -16,13 +16,13 @@ const FallingSnows = ({ children }: any) => {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    for (let i = 0; i < flakeCount; i++) {
-      const flake = flakes[i];
+    for (let i = 0; i < petalCount; i++) {
+      const petal = petalsRef.current[i];
       const x = mX;
       const y = mY;
       const minDist = 150;
-      const x2 = flake.x;
-      const y2 = flake.y;
+      const x2 = petal.x;
+      const y2 = petal.y;
 
       const dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y));
 
@@ -32,77 +32,111 @@ const FallingSnows = ({ children }: any) => {
         const ycomp = (y - y2) / dist;
         const deltaV = force / 2;
 
-        flake.velX -= deltaV * xcomp;
-        flake.velY -= deltaV * ycomp;
+        petal.velX -= deltaV * xcomp;
+        petal.velY -= deltaV * ycomp;
       } else {
-        flake.velX *= 0.98;
-        if (flake.velY <= flake.speed) {
-          flake.velY = flake.speed;
+        petal.velX *= 0.98;
+        if (petal.velY <= petal.speed) {
+          petal.velY = petal.speed;
         }
-        flake.velX += Math.cos((flake.step += 0.05)) * flake.stepSize;
+        // Tăng hiệu ứng lắc lư nhẹ nhàng của cánh hoa
+        petal.velX += Math.cos((petal.step += 0.03)) * petal.stepSize;
       }
 
-      ctx.fillStyle = `rgba(255, 255, 255, ${flake.opacity})`; // White color for hearts
-      flake.y += flake.velY;
-      flake.x += flake.velX;
+      // Xoay cánh hoa khi rơi
+      petal.rotation += petal.rotationSpeed;
+      petal.y += petal.velY;
+      petal.x += petal.velX;
 
-      if (flake.y >= canvas.height || flake.y <= 0) {
-        reset(flake);
+      if (petal.y >= canvas.height || petal.y <= 0) {
+        reset(petal);
       }
 
-      if (flake.x >= canvas.width || flake.x <= 0) {
-        reset(flake);
+      if (petal.x >= canvas.width || petal.x <= 0) {
+        reset(petal);
       }
 
+      // Vẽ cánh hoa với màu sắc mùa xuân
+      ctx.save();
+      ctx.translate(petal.x, petal.y);
+      ctx.rotate(petal.rotation);
+
+      // Vẽ hình cánh hoa đơn giản (oval)
+      ctx.fillStyle = petal.color;
       ctx.beginPath();
-      ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
+      ctx.ellipse(0, 0, petal.size * 1.5, petal.size, 0, 0, Math.PI * 2);
       ctx.fill();
+
+      ctx.restore();
     }
-    requestAnimationFrame(snow);
+    requestAnimationFrame(animatePetals);
   }
 
-  // Reset a flake to a new random position
-  function reset(flake: any) {
+  // Reset a petal to a new random position
+  function reset(petal: any) {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    flake.x = Math.floor(Math.random() * canvas.width);
-    flake.y = 0;
-    flake.size = Math.random() * 3 + 2;
-    flake.speed = Math.random() * 1 + 0.5;
-    flake.velY = flake.speed;
-    flake.velX = 0;
-    flake.opacity = Math.random() * 0.5 + 0.3;
+
+    // Màu sắc hoa mùa xuân (hồng nhạt, trắng, đào)
+    const colors = [
+      "rgba(255, 182, 193, 0.7)", // Hồng nhạt
+      "rgba(255, 192, 203, 0.7)", // Hồng phấn
+      "rgba(255, 240, 245, 0.8)", // Trắng hồng
+      "rgba(255, 218, 224, 0.7)", // Hồng đào
+      "rgba(255, 228, 225, 0.7)", // Hồng misty
+    ];
+
+    petal.x = Math.floor(Math.random() * canvas.width);
+    petal.y = 0;
+    petal.size = Math.random() * 2 + 2; // Cánh hoa nhỏ hơn tuyết
+    petal.speed = Math.random() * 0.5 + 0.3; // Rơi chậm hơn
+    petal.velY = petal.speed;
+    petal.velX = 0;
+    petal.color = colors[Math.floor(Math.random() * colors.length)];
+    petal.rotation = Math.random() * Math.PI * 2;
+    petal.rotationSpeed = (Math.random() - 0.5) * 0.02; // Xoay chậm
   }
 
-  // Initialize snowflakes
+  // Initialize spring petals
   function init() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    canvas.width = window.innerWidth; // Set canvas width on initial render
-    canvas.height = window.innerHeight; // Set canvas height on initial render
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-    for (let i = 0; i < flakeCount; i++) {
+    // Màu sắc hoa mùa xuân
+    const colors = [
+      "rgba(255, 182, 193, 0.7)", // Hồng nhạt
+      "rgba(255, 192, 203, 0.7)", // Hồng phấn
+      "rgba(255, 240, 245, 0.8)", // Trắng hồng
+      "rgba(255, 218, 224, 0.7)", // Hồng đào
+      "rgba(255, 228, 225, 0.7)", // Hồng misty
+    ];
+
+    for (let i = 0; i < petalCount; i++) {
       const x = Math.floor(Math.random() * window.innerWidth);
       const y = Math.floor(Math.random() * window.innerHeight);
-      const size = Math.random() * 3 + 2;
-      const speed = Math.random() * 1 + 0.5;
-      const opacity = Math.random() * 0.5 + 0.3;
+      const size = Math.random() * 2 + 2;
+      const speed = Math.random() * 0.5 + 0.3;
+      const color = colors[Math.floor(Math.random() * colors.length)];
 
-      flakes.push({
+      petalsRef.current.push({
         speed: speed,
         velY: speed,
         velX: 0,
         x: x,
         y: y,
         size: size,
-        stepSize: Math.random() / 30,
+        stepSize: Math.random() / 40, // Lắc lư nhẹ nhàng hơn
         step: 0,
-        opacity: opacity,
+        color: color,
+        rotation: Math.random() * Math.PI * 2,
+        rotationSpeed: (Math.random() - 0.5) * 0.02,
       });
     }
 
-    snow();
+    animatePetals();
   }
 
   // Handle mouse movement to interact with flakes
@@ -146,4 +180,4 @@ const FallingSnows = ({ children }: any) => {
   );
 };
 
-export default FallingSnows;
+export default FallingPetals;

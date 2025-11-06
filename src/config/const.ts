@@ -72,7 +72,7 @@ export const GROOM_EVENT_TITLE = "Tiệc nhà trai được tổ chức vào";
 export const GROOM_EVENT_DATE = "30/11/2025";
 export const GROOM_EVENT_TIME = "13h30";
 export const GROOM_EVENT_LOCATION =
-  "thôn Chè núi, xã Liên Bão, huyện Tiên Du, tỉnh Bắc Ninh";
+  "thôn Chè Núi, xã Liên Bão, huyện Tiên Du, tỉnh Bắc Ninh";
 export const GROOM_EVENT_MAP_LINK = "https://maps.app.goo.gl/tdL5wGEa2q3qEdRy9";
 
 /* ===========================
@@ -104,32 +104,18 @@ export const GALLERY_IMAGES = [
   "/images/gray-xy2.jpg",
   "/images/gray-xy3.jpg",
   "/images/gray-xy4.jpg",
-  "/images/gray-xy5.jpg",
   "/images/pink-xy1.jpg",
   "/images/pink-xy2.jpg",
   "/images/pink-xy3.jpg",
   "/images/pink-xy4.jpg",
-  "/images/pink-xy5.jpg",
-  "/images/pink-xy6.jpg",
-  "/images/pink-xy7.jpg",
-  "/images/pink-xy8.jpg",
-  "/images/pink-xy9.jpg",
-  "/images/pink-xy10.jpg",
   "/images/red-xy1.jpg",
   "/images/red-xy2.jpg",
   "/images/red-xy3.jpg",
   "/images/red-xy4.jpg",
-  "/images/red-xy5.jpg",
-  "/images/red-xy6.jpg",
-  "/images/white-x.jpg",
-  "/images/white-y.jpg",
   "/images/white-xy1.jpg",
   "/images/white-xy2.jpg",
   "/images/white-xy3.jpg",
   "/images/white-xy4.jpg",
-  "/images/white-xy5.jpg",
-  "/images/white-xy6.jpg",
-  "/images/white-xy7.jpg",
 ];
 
 /* ===========================

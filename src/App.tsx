@@ -17,7 +17,7 @@ function App() {
       <FallingSnows>
         <HeroSection />
         <PeopleSection />
-        <AboutUsSection />
+        {/* <AboutUsSection /> */}
         <EventDetailsSection />
         <Carousel />
         <CountDownSection />

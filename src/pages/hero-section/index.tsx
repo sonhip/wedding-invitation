@@ -41,7 +41,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative bg-wedding-light min-h-screen flex items-center justify-center text-center p-6 overflow-hidden">
+    <section className="relative bg-wedding-light min-h-screen flex items-end md:items-center justify-center text-center p-6 pb-20 md:pb-6 overflow-hidden">
       {/* Image Slider with repeat if needed */}
       <div className="absolute top-0 left-0 w-full h-full opacity-50">
         <div
@@ -56,8 +56,12 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-4xl mx-auto">
         {/* Title */}
-        <h1 className="hero-title text-wedding-deep text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-          {GROOM_NAME} & {BRIDE_NAME}
+        <h1 className="hero-title text-wedding-deep text-3xl md:text-6xl lg:text-7xl font-bold leading-tight">
+          {GROOM_NAME}
+          <br />
+          ♥️
+          <br />
+          {BRIDE_NAME}
         </h1>
 
         {/* Subtitle */}
