@@ -1,5 +1,10 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import {
+  THANK_YOU_TITLE,
+  THANK_YOU_MESSAGE_1,
+  THANK_YOU_MESSAGE_2,
+} from "@/config/const";
 
 const ThankYouSection: React.FC = () => {
   useEffect(() => {
@@ -25,14 +30,13 @@ const ThankYouSection: React.FC = () => {
     <section className="py-16 bg-wedding-light text-center min-w-96">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="thank-you-text text-3xl md:text-4xl font-bold text-wedding-deep">
-          Cảm ơn bạn!
+          {THANK_YOU_TITLE}
         </h2>
         <p className="thank-you-text text-lg text-wedding-purple mt-4">
-          Chúng tôi rất vui khi được chia sẻ khoảnh khắc đặc biệt này với bạn.
+          {THANK_YOU_MESSAGE_1}
         </p>
         <p className="thank-you-text text-lg text-wedding-purple mt-2">
-          Mong rằng bạn sẽ luôn đồng hành cùng chúng tôi trong hành trình phía
-          trước.
+          {THANK_YOU_MESSAGE_2}
         </p>
       </div>
     </section>

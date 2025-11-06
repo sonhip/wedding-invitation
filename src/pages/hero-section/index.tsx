@@ -1,22 +1,19 @@
 import WishModalButton from "@/components/WishModalButton";
+import {
+  BRIDE_NAME,
+  GROOM_NAME,
+  WEDDING_DATE,
+  HERO_IMAGES,
+} from "@/config/const";
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
-
-export const WEDDING_DATE = "15/03/2025";
-
-const images = [
-  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404783/wedding-images/v6eleejskl4fukahl2xc.jpg",
-  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/yhbbxsdprkdvt06lfmab.jpg",
-  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404783/wedding-images/jwxl6cxkkllqsrvkss43.jpg",
-  "https://res.cloudinary.com/db8mh2s66/image/upload/v1740404782/wedding-images/csmz2fnpteftwep4lp1c.jpg",
-];
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+      setCurrentImage((prevImage) => (prevImage + 1) % HERO_IMAGES.length);
     }, 3000); // 3 seconds for image change
 
     return () => clearInterval(interval); // Clean up interval on unmount
@@ -50,7 +47,7 @@ const HeroSection = () => {
         <div
           className="hero-image w-full h-full bg-cover bg-center transition-all duration-1000 ease-in-out"
           style={{
-            backgroundImage: `url(${images[currentImage]})`,
+            backgroundImage: `url(${HERO_IMAGES[currentImage]})`,
             backgroundRepeat: "repeat-x", // Repeat the image horizontally if not wide enough
             backgroundSize: "auto 100%", // Maintain the aspect ratio and repeat horizontally
           }}
@@ -60,7 +57,7 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-4xl mx-auto">
         {/* Title */}
         <h1 className="hero-title text-wedding-deep text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-          Trần Hiệp & Minh Anh
+          {GROOM_NAME} & {BRIDE_NAME}
         </h1>
 
         {/* Subtitle */}

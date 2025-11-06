@@ -1,3 +1,4 @@
+import { BRIDE_NAME, GROOM_NAME } from "@/config/const";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
@@ -63,7 +64,8 @@ const FooterSection: React.FC = () => {
         {/* Copyright Text */}
         <div className="footer-item">
           <p className="text-sm text-wedding-light">
-            © 2025 [Trần Hiệp] & [Minh Anh] - All Rights Reserved
+            `© {new Date().getFullYear()} {GROOM_NAME} & {BRIDE_NAME}. All
+            rights reserved.`
           </p>
         </div>
 

@@ -1,6 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+  EVENT_SECTION_TITLE,
+  EVENT_SECTION_DESCRIPTION,
+  BRIDE_EVENT_TITLE,
+  BRIDE_EVENT_DATE,
+  BRIDE_EVENT_TIME,
+  BRIDE_EVENT_LOCATION,
+  BRIDE_EVENT_MAP_LINK,
+  GROOM_EVENT_TITLE,
+  GROOM_EVENT_DATE,
+  GROOM_EVENT_TIME,
+  GROOM_EVENT_LOCATION,
+  GROOM_EVENT_LOCATION_DETAIL,
+  GROOM_EVENT_MAP_LINK,
+} from "@/config/const";
 
 // Đăng ký plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -115,7 +130,7 @@ const EventDetailsSection: React.FC = () => {
             className="event-title text-wedding-light text-3xl md:text-4xl font-bold text-center"
             style={{ textShadow: "0 4px 6px rgba(0, 0, 0, 0.3)" }}
           >
-            Sự Kiện Cưới
+            {EVENT_SECTION_TITLE}
           </h2>
         </div>
 
@@ -125,8 +140,7 @@ const EventDetailsSection: React.FC = () => {
             className="text-wedding-light text-lg mt-4 leading-relaxed text-center"
             style={{ textShadow: "0 4px 6px rgba(0, 0, 0, 0.3)" }}
           >
-            Tình yêu đích thực đứng về phía nhau trong những ngày tốt đẹp và sát
-            cánh hơn trong những ngày mệt mỏi.
+            {EVENT_SECTION_DESCRIPTION}
           </p>
         </div>
 
@@ -137,23 +151,21 @@ const EventDetailsSection: React.FC = () => {
               className="text-wedding-light text-2xl font-semibold"
               style={{ textShadow: "0 4px 6px rgba(0, 0, 0, 0.3)" }}
             >
-              Tiệc nhà gái được tổ chức vào
+              {BRIDE_EVENT_TITLE}
             </h3>
-            <p className="text-wedding-light text-lg">Ngày: 14/03/2025</p>
-            <p className="text-wedding-light text-lg">Giờ: 16:00</p>
             <p className="text-wedding-light text-lg">
-              Địa điểm: Đội 1 - Thôn An Tân - Xã Gia Phúc - Huyện Gia Lộc - Tỉnh
-              Hải Dương
+              Ngày: {BRIDE_EVENT_DATE}
+            </p>
+            <p className="text-wedding-light text-lg">
+              Giờ: {BRIDE_EVENT_TIME}
+            </p>
+            <p className="text-wedding-light text-lg">
+              Địa điểm: {BRIDE_EVENT_LOCATION}
             </p>
             <div className="flex space-x-4">
               <button
                 className="btn bg-wedding-deep text-wedding-light px-6 py-2 rounded shadow-lg"
-                onClick={() =>
-                  window.open(
-                    "https://maps.app.goo.gl/k2M6ofqWPnT7zGP78",
-                    "_blank"
-                  )
-                }
+                onClick={() => window.open(BRIDE_EVENT_MAP_LINK, "_blank")}
               >
                 Hướng dẫn đi
               </button>
@@ -173,24 +185,22 @@ const EventDetailsSection: React.FC = () => {
               className="text-wedding-light text-2xl font-semibold"
               style={{ textShadow: "0 4px 6px rgba(0, 0, 0, 0.3)" }}
             >
-              Tiệc nhà trai được tổ chức vào
+              {GROOM_EVENT_TITLE}
             </h3>
-            <p className="text-wedding-light text-lg">Ngày: 15/03/2025</p>
-            <p className="text-wedding-light text-lg">Giờ: 11:00</p>
             <p className="text-wedding-light text-lg">
-              Địa điểm: Trung tâm tiệc cưới Trống Đồng Place Hoàng Gia <br />
-              Phòng Hoàng Gia tầng 1, số 172 Trường Chinh - Tân Bình - TP.Hải
-              Dương
+              Ngày: {GROOM_EVENT_DATE}
+            </p>
+            <p className="text-wedding-light text-lg">
+              Giờ: {GROOM_EVENT_TIME}
+            </p>
+            <p className="text-wedding-light text-lg">
+              Địa điểm: {GROOM_EVENT_LOCATION} <br />
+              {GROOM_EVENT_LOCATION_DETAIL}
             </p>
             <div className="flex space-x-4">
               <button
                 className="btn bg-wedding-deep text-wedding-light px-6 py-2 rounded shadow-lg"
-                onClick={() =>
-                  window.open(
-                    "https://maps.app.goo.gl/2v3SzqCLtpCtCCom8",
-                    "_blank"
-                  )
-                }
+                onClick={() => window.open(GROOM_EVENT_MAP_LINK, "_blank")}
               >
                 Hướng dẫn đi
               </button>

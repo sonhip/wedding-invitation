@@ -1,18 +1,11 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import image1 from "../../assets/gallery-images/1.jpeg";
-import image2 from "../../assets/gallery-images/2.jpeg";
-import image3 from "../../assets/gallery-images/3.jpeg";
-import image4 from "../../assets/gallery-images/4.jpeg";
-import image5 from "../../assets/gallery-images/5.jpeg";
-import image6 from "../../assets/gallery-images/6.jpeg";
-import image7 from "../../assets/gallery-images/7.jpeg";
-
-const galleryImages = [image1, image2, image3, image4, image5, image6, image7];
+import { GALLERY_TITLE, GALLERY_IMAGES } from "@/config/const";
 
 // Đăng ký plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
+
 const GallerySection: React.FC = () => {
   useEffect(() => {
     // GSAP Scroll Animation cho phần Gallery
@@ -71,13 +64,13 @@ const GallerySection: React.FC = () => {
         {/* Gallery Title */}
         <div>
           <h2 className="gallery-title text-wedding-deep text-3xl md:text-4xl font-bold">
-            Album Hình Cưới
+            {GALLERY_TITLE}
           </h2>
         </div>
 
         {/* Gallery Items */}
         <div className="gallery-items grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12">
-          {galleryImages.map((image, index) => (
+          {GALLERY_IMAGES.map((image, index) => (
             <div className="gallery-item" key={index}>
               <div className="gallery-img overflow-hidden rounded-lg shadow-lg">
                 <img

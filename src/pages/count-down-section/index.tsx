@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ConfirmModalButton from "@/components/ConfirmModal";
 import SendViaBoxModal from "@/components/SendViaBoxModal";
-import { WEDDING_DATE } from "../hero-section";
+import { WEDDING_DATE, COUNTDOWN_TITLE } from "@/config/const";
 
 // Đăng ký plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -70,7 +70,7 @@ const CountDownSection: React.FC = () => {
         {/* Countdown Title */}
         <div className="countdown-title">
           <h2 className="text-wedding-deep text-3xl md:text-4xl font-bold">
-            Đếm ngược đến ngày cưới cùng chúng mình
+            {COUNTDOWN_TITLE}
           </h2>
         </div>
 
