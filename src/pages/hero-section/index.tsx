@@ -13,11 +13,21 @@ const HeroSection = () => {
   const guestName = useGuestName();
 
   useEffect(() => {
-    // GSAP Animation
+    // GSAP Animation: text từ 2 bên và các phần khác từ dưới lên
     gsap.fromTo(
-      ".hero-fade-in",
+      ".from-left",
+      { opacity: 0, x: -80 },
+      { opacity: 1, x: 0, duration: 1, stagger: 0.15, delay: 0.3 }
+    );
+    gsap.fromTo(
+      ".from-right",
+      { opacity: 0, x: 80 },
+      { opacity: 1, x: 0, duration: 1, stagger: 0.15, delay: 0.45 }
+    );
+    gsap.fromTo(
+      ".from-bottom",
       { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 1, stagger: 0.2, delay: 0.3 }
+      { opacity: 1, y: 0, duration: 1, stagger: 0.15, delay: 0.6 }
     );
   }, []);
 
@@ -47,29 +57,31 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-4xl mx-auto space-y-8 md:space-y-12">
         {/* SAVE THE DATE */}
-        <div className="hero-fade-in">
+        <div className="from-bottom">
           <p className="text-wedding-brown text-2xl tracking-[0.3em] font-light uppercase">
             SAVE THE DATE
           </p>
         </div>
 
-        {/* Bride and Groom Names */}
-        <div className="hero-fade-in space-y-4">
-          <h1 className="text-wedding-brown text-5xl md:text-7xl lg:text-8xl font-serif leading-tight">
+        {/* Bride and Groom Names - xuất hiện từ 2 bên */}
+        <div className="space-y-4">
+          <h1 className="from-left text-wedding-brown text-5xl md:text-7xl lg:text-8xl font-serif leading-tight">
             {GROOM_NAME}
           </h1>
+
           <div className="flex items-center justify-center gap-4">
             <div className="w-16 h-[2px] bg-wedding-brown"></div>
             ♥️
             <div className="w-16 h-[2px] bg-wedding-brown"></div>
           </div>
-          <h1 className="text-wedding-brown text-5xl md:text-7xl lg:text-8xl font-serif leading-tight">
+
+          <h1 className="from-right text-wedding-brown text-5xl md:text-7xl lg:text-8xl font-serif leading-tight">
             {BRIDE_NAME}
           </h1>
         </div>
 
         {/* Double Happiness Symbol - using SVG */}
-        <div className="hero-fade-in flex justify-center">
+        <div className="from-bottom flex justify-center">
           <img
             src="/images/boxes/hi.svg"
             alt="囍"
@@ -78,14 +90,14 @@ const HeroSection = () => {
         </div>
 
         {/* Wedding Date */}
-        <div className="hero-fade-in">
+        <div className="from-bottom">
           <p className="text-wedding-brown text-3xl md:text-5xl lg:text-6xl font-light tracking-widest">
             {WEDDING_DATE}
           </p>
         </div>
 
         {/* Location */}
-        <div className="hero-fade-in space-y-2">
+        <div className="from-bottom space-y-2">
           <p className="text-wedding-brown text-lg md:text-xl lg:text-2xl font-light">
             {WEDDING_LOCATION}
           </p>
@@ -95,7 +107,7 @@ const HeroSection = () => {
         </div>
 
         {/* Guest Name & Invitation */}
-        <div className="hero-fade-in space-y-4 pt-4">
+        <div className="from-bottom space-y-4 pt-4">
           <div className="w-full h-[1px] bg-wedding-brown opacity-30 max-w-md mx-auto"></div>
           <p className="text-wedding-brown text-xl md:text-2xl font-serif italic">
             TRÂN TRỌNG KÍNH MỜI
