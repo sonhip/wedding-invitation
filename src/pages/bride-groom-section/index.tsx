@@ -137,7 +137,7 @@ const BrideGroomSection = () => {
   }, []);
 
   return (
-    <section className="invitation-section py-16 md:py-24 bg-wedding-cream">
+    <section className="invitation-section py-16 pb-4 md:py-24 bg-wedding-cream">
       <div className="max-w-6xl mx-auto px-6">
         {/* Title */}
         <div className="invitation-title text-center mb-4 md:mb-6">

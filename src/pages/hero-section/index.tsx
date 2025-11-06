@@ -32,30 +32,30 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative bg-wedding-cream min-h-screen flex items-center justify-center text-center px-6 py-12 overflow-hidden">
+    <section className="relative bg-wedding-cream min-h-[75vh] md:min-h-screen flex items-center justify-center text-center px-6 py-12 overflow-hidden">
       {/* Corner decorations - using images */}
       <img
         src="/images/boxes/corner-topleft.webp"
         alt=""
-        className="absolute top-0 left-0 w-24 h-24 md:w-32 md:h-32 object-contain"
+        className="absolute top-0 left-0 w-20 h-20 md:w-32 md:h-32 object-contain"
       />
       <img
         src="/images/boxes/corner-topleft.webp"
         alt=""
-        className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 object-contain rotate-90"
+        className="absolute top-0 right-0 w-20 h-20 md:w-32 md:h-32 object-contain rotate-90"
       />
       <img
         src="/images/boxes/corner-topleft.webp"
         alt=""
-        className="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 object-contain -rotate-90"
+        className="absolute bottom-0 left-0 w-20 h-20 md:w-32 md:h-32 object-contain -rotate-90"
       />
       <img
         src="/images/boxes/corner-topleft.webp"
         alt=""
-        className="absolute bottom-0 right-0 w-24 h-24 md:w-32 md:h-32 object-contain rotate-180"
+        className="absolute bottom-0 right-0 w-20 h-20 md:w-32 md:h-32 object-contain rotate-180"
       />
 
-      <div className="relative z-10 max-w-4xl mx-auto space-y-8 md:space-y-12">
+      <div className="relative z-10 max-w-4xl mx-auto space-y-5 md:space-y-12">
         {/* SAVE THE DATE */}
         <div className="from-bottom">
           <p className="text-wedding-brown text-2xl tracking-[0.3em] font-light uppercase">
@@ -64,7 +64,7 @@ const HeroSection = () => {
         </div>
 
         {/* Bride and Groom Names - xuất hiện từ 2 bên */}
-        <div className="space-y-4">
+        <div className="space-y-2">
           <h1 className="from-left text-wedding-brown text-5xl md:text-7xl lg:text-8xl font-serif leading-tight">
             {GROOM_NAME}
           </h1>
@@ -107,30 +107,33 @@ const HeroSection = () => {
         </div>
 
         {/* Guest Name & Invitation */}
-        <div className="from-bottom space-y-4 pt-4">
+        <div className="from-bottom space-y-2 pt-4">
           <div className="w-full h-[1px] bg-wedding-brown opacity-30 max-w-md mx-auto"></div>
           <p className="text-wedding-brown text-xl md:text-2xl font-serif italic">
             TRÂN TRỌNG KÍNH MỜI
           </p>
-          <p className="text-wedding-brown mt-2 text-2xl md:text-3xl lg:text-4xl font-tinos italic !-mb-3">
+          <p className="text-wedding-brown mt-2 text-2xl md:text-3xl lg:text-4xl font-tinos italic !-mb-2">
             {guestName}
           </p>
           <div className="flex items-center justify-center gap-2 !mt-0">
-            <span className="text-wedding-brown">•</span>
-            <span className="text-wedding-brown">•</span>
-            <span className="text-wedding-brown">•</span>
-            <span className="text-wedding-brown">•</span>
-            <span className="text-wedding-brown">•</span>
-            <span className="text-wedding-brown">•</span>
-            <span className="text-wedding-brown">•</span>
-            <span className="text-wedding-brown">•</span>
-            <span className="text-wedding-brown">•</span>
-            <span className="text-wedding-brown">•</span>
-            <span className="text-wedding-brown">•</span>
-            <span className="text-wedding-brown">•</span>
-            <span className="text-wedding-brown">•</span>
-            <span className="text-wedding-brown">•</span>
-            <span className="text-wedding-brown">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
+            <span className="text-wedding-brown text-xs">•</span>
           </div>
         </div>
       </div>

@@ -62,26 +62,32 @@ export const COUNTDOWN_TITLE = "Đếm ngược đến ngày cưới cùng chún
     Event Details (Chi tiết sự kiện)
     =========================== */
 // Tiêu đề & mô tả chung cho phần sự kiện
-export const EVENT_SECTION_TITLE = "Sự Kiện Cưới";
+export const EVENT_SECTION_TITLE = "LỄ VU QUY";
+
+/* ---- Nhà gái ---- */
+export const BRIDE_PARENTS_TITLE = "NHÀ GÁI";
+export const BRIDE_FATHER_NAME = "ÔNG: NGUYỄN QUANG TUYỂN";
+export const BRIDE_MOTHER_NAME = "BÀ: VŨ THỊ LIÊN";
+export const BRIDE_EVENT_LOCATION =
+  "Thôn Dổ Thượng, Xã Nguyễn Lương Bằng, TP. Hải Phòng";
+
+/* ---- Nhà trai ---- */
+export const GROOM_PARENTS_TITLE = "NHÀ TRAI";
+export const GROOM_FATHER_NAME = "ÔNG: VŨ HỮU MINH";
+export const GROOM_MOTHER_NAME = "BÀ: VŨ THỊ NGOÂN";
+export const GROOM_EVENT_LOCATION =
+  "Thôn Dổ Hạ, Xã Nguyễn Lương Bằng, TP. Hải Phòng";
+
+// Legacy constants (giữ lại để không break code cũ)
 export const EVENT_SECTION_DESCRIPTION =
   "Tình yêu đích thực đứng về phía nhau trong những ngày tốt đẹp và sát cánh hơn trong những ngày mệt mỏi.";
-
-/* ---- Tiệc nhà gái ---- */
-// Tiêu đề, ngày giờ, địa điểm và link bản đồ cho tiệc nhà gái
 export const BRIDE_EVENT_TITLE = "Tiệc nhà gái được tổ chức vào";
 export const BRIDE_EVENT_DATE = "30/11/2025";
 export const BRIDE_EVENT_TIME = "10h40";
-export const BRIDE_EVENT_LOCATION =
-  "thôn An Cố Nam, xã An Tân, huyện Thái Thuỵ, tỉnh Thái Bình";
 export const BRIDE_EVENT_MAP_LINK = "https://maps.app.goo.gl/PmmosgLui9XWDGJp6";
-
-/* ---- Tiệc nhà trai ---- */
-// Tiêu đề, ngày giờ, địa điểm và link bản đồ cho tiệc nhà trai
 export const GROOM_EVENT_TITLE = "Tiệc nhà trai được tổ chức vào";
 export const GROOM_EVENT_DATE = "30/11/2025";
 export const GROOM_EVENT_TIME = "13h30";
-export const GROOM_EVENT_LOCATION =
-  "thôn Chè Núi, xã Liên Bão, huyện Tiên Du, tỉnh Bắc Ninh";
 export const GROOM_EVENT_MAP_LINK = "https://maps.app.goo.gl/tdL5wGEa2q3qEdRy9";
 
 /* ===========================
