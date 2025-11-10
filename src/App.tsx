@@ -16,12 +16,12 @@ function App() {
     <div className="min-h-screen">
       <FallingSnows>
         <HeroSection />
-        <Calendar />
         <BrideGroomSection />
         <GatherSection />
         <EventSection />
         <CountDownSection />
         <GallerySection />
+        <Calendar />
         <ThankYouSection />
         <FooterSection />
         <Toaster />
