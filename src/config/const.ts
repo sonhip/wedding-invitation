@@ -24,7 +24,7 @@ export const GROOM_DESCRIPTION = "Chú rể đẹp trai và thông minh.";
     =========================== */
 // Ngày & địa điểm chính của đám cưới hiển thị trên hero
 export const WEDDING_DATE = "30/11/2025";
-export const WEDDING_LOCATION = "Thôn An Chè - Xã Liên Bão - Huyện Tiên Du";
+export const WEDDING_LOCATION = "Thôn Chè - Xã Liên Bão - Huyện Tiên Du";
 export const WEDDING_LOCATION_CITY = "Tỉnh Bắc Ninh";
 // Mảng ảnh hiển thị trong hero (carousel/background)
 export const HERO_IMAGES = [
