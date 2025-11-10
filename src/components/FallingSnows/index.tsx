@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 const FallingPetals = ({ children }: any) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const petalsRef = useRef<any[]>([]);
-  const petalCount = 99; // Ít hơn tuyết để nhẹ nhàng hơn
+  const petalCount = 50; // Ít hơn tuyết để nhẹ nhàng hơn
   let mX = -100;
   let mY = -100;
 

@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ConfirmModalButton from "@/components/ConfirmModal";
 import SendViaBoxModal from "@/components/SendViaBoxModal";
 import { WEDDING_DATE, COUNTDOWN_TITLE } from "@/config/const";
+import WishModalButton from "@/components/WishModalButton";
 
 // Đăng ký plugin ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -123,8 +124,9 @@ const CountDownSection: React.FC = () => {
 
         {/* Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4 sm:gap-12 px-4">
-          <SendViaBoxModal />
+          <WishModalButton />
           <ConfirmModalButton />
+          <SendViaBoxModal />
         </div>
       </div>
     </section>

@@ -72,7 +72,7 @@ const WishModalButton: React.FC = () => {
 
   return (
     <Dialog>
-      <DialogTrigger className="btn mt-8 px-6 py-3 bg-wedding-brown text-white text-lg md:text-xl font-semibold rounded-lg hover:bg-wedding-brown/90 transition">
+      <DialogTrigger className="btn mt-8 px-6 py-3 bg-wedding-cream text-wedding-brown text-lg md:text-xl font-semibold rounded-lg hover:bg-wedding-cream/90 transition">
         Gửi Lời Chúc
       </DialogTrigger>
 
