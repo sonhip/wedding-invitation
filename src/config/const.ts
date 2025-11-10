@@ -92,9 +92,8 @@ export const EVENT_DAY_NAME = "CHỦ NHẬT";
 export const EVENT_LUNAR_DATE = "(Tức ngày 11 tháng 10 năm Ất Tỵ)";
 export const EVENT_LOCATION_TITLE = "Địa Điểm";
 export const EVENT_LOCATION_VENUE = "TẠI TƯ GIA NHÀ TRAI";
-export const EVENT_LOCATION_ADDRESS =
-  "Thôn An Cố Nam, Xã An Tân, Huyện Thái Thuỵ";
-export const EVENT_LOCATION_CITY = "Tỉnh Thái Bình";
+export const EVENT_LOCATION_ADDRESS = "Thôn Chè, Xã Liên Bão, Huyện Tiên Du";
+export const EVENT_LOCATION_CITY = "Tỉnh Bắc Ninh";
 export const EVENT_INVITATION_TEXT =
   "Chúng Tôi Rất Hân Hạnh Được Mời Quý Vị Đến Tham Dự";
 export const EVENT_INVITATION_HIGHLIGHT = "Buổi Tiệc Chung Vui";
@@ -107,7 +106,7 @@ export const BRIDE_EVENT_MAP_LINK = "https://maps.app.goo.gl/VCohidovTKkxKwt58";
 export const GROOM_EVENT_TITLE = "Tiệc nhà trai được tổ chức vào";
 export const GROOM_EVENT_DATE = "30/11/2025";
 export const GROOM_EVENT_TIME = "13h30";
-export const GROOM_EVENT_MAP_LINK = "https://maps.app.goo.gl/rTCSpbe3BPBusqJV9";
+export const GROOM_EVENT_MAP_LINK = "https://maps.app.goo.gl/s6UZizHrU3X9NAKX8";
 
 /* ===========================
     Thank You (Lời cảm ơn)
