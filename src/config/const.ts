@@ -24,8 +24,8 @@ export const GROOM_DESCRIPTION = "Chú rể đẹp trai và thông minh.";
     =========================== */
 // Ngày & địa điểm chính của đám cưới hiển thị trên hero
 export const WEDDING_DATE = "30/11/2025";
-export const WEDDING_LOCATION = "Thôn An Cố Nam - Xã An Tân - Huyện Thái Thuỵ";
-export const WEDDING_LOCATION_CITY = "Tỉnh Thái Bình";
+export const WEDDING_LOCATION = "Thôn An Chè - Xã Liên Bão - Huyện Tiên Du";
+export const WEDDING_LOCATION_CITY = "Tỉnh Bắc Ninh";
 // Mảng ảnh hiển thị trong hero (carousel/background)
 export const HERO_IMAGES = [
   "/images/gray-xy1.jpg",
@@ -46,7 +46,7 @@ export const BRIDE_IMAGE = "/images/white-x.jpg";
 export const GROOM_IMAGE = "/images/white-y.jpg";
 
 // Thông tin invitation section
-export const INVITATION_TITLE = "THƯ MỜI THAM DỰ LỄ CƯỚI";
+export const INVITATION_TITLE = "THIỆP MỜI THAM DỰ LỄ CƯỚI";
 export const INVITATION_SUBTITLE =
   "Trân trọng kính mời đến dự lễ cưới của chúng tôi";
 export const INVITATION_STORY =
@@ -62,7 +62,7 @@ export const COUNTDOWN_TITLE = "Đếm ngược đến ngày cưới cùng chún
     Event Details (Chi tiết sự kiện)
     =========================== */
 // Tiêu đề & mô tả chung cho phần sự kiện
-export const EVENT_SECTION_TITLE = "LỄ VU QUY";
+export const EVENT_SECTION_TITLE = "LỄ TÂN HÔN";
 
 /* ---- Nhà gái ---- */
 export const BRIDE_PARENTS_TITLE = "NHÀ GÁI";
@@ -76,7 +76,7 @@ export const GROOM_PARENTS_TITLE = "NHÀ TRAI";
 export const GROOM_FATHER_NAME = "ÔNG: NGUYỄN ĐỨC KHẮC (cố phụ)";
 export const GROOM_MOTHER_NAME = "BÀ: TRẦN THỊ ANH";
 export const GROOM_EVENT_LOCATION =
-  "Thôn Chè, Xã Liên Bão, Huyện Thái Thuỵ, Tỉnh Thái Bình";
+  "Thôn Chè, Xã Liên Bão, Huyện Tiên Du, Tỉnh Bắc Ninh";
 
 // Legacy constants (giữ lại để không break code cũ)
 export const EVENT_SECTION_DESCRIPTION =
@@ -84,7 +84,7 @@ export const EVENT_SECTION_DESCRIPTION =
 
 // Event details constants
 export const EVENT_CEREMONY_TITLE = "HÔN LỄ ĐƯỢC TỔ CHỨC VÀO LÚC";
-export const EVENT_TIME = "10 GIỜ 40";
+export const EVENT_TIME = "13 GIỜ 30";
 export const EVENT_DATE_DAY = "30";
 export const EVENT_DATE_MONTH = "11";
 export const EVENT_DATE_YEAR = "25";
@@ -107,7 +107,7 @@ export const BRIDE_EVENT_MAP_LINK = "https://maps.app.goo.gl/VCohidovTKkxKwt58";
 export const GROOM_EVENT_TITLE = "Tiệc nhà trai được tổ chức vào";
 export const GROOM_EVENT_DATE = "30/11/2025";
 export const GROOM_EVENT_TIME = "13h30";
-export const GROOM_EVENT_MAP_LINK = "https://maps.app.goo.gl/tdL5wGEa2q3qEdRy9";
+export const GROOM_EVENT_MAP_LINK = "https://maps.app.goo.gl/ZHbs1hPs1fzYKh617";
 
 /* ===========================
     Thank You (Lời cảm ơn)

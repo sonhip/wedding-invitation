@@ -101,24 +101,6 @@ const GatherSection: React.FC = () => {
         </div>
 
         <div className="space-y-6 md:space-y-8">
-          {/* Bride Section */}
-          <div className="bride-section space-y-3">
-            <h3 className="text-wedding-brown text-2xl md:text-3xl font-bold tracking-wide">
-              {BRIDE_PARENTS_TITLE}
-            </h3>
-            <div className="space-y-1">
-              <p className="text-wedding-brown text-lg md:text-xl">
-                {BRIDE_FATHER_NAME}
-              </p>
-              <p className="text-wedding-brown text-lg md:text-xl">
-                {BRIDE_MOTHER_NAME}
-              </p>
-            </div>
-            <p className="text-wedding-brown/80 text-base md:text-lg leading-snug">
-              {BRIDE_EVENT_LOCATION}
-            </p>
-          </div>
-
           {/* Groom Section */}
           <div className="groom-section space-y-3">
             <h3 className="text-wedding-brown text-2xl md:text-3xl font-bold tracking-wide">
@@ -134,6 +116,24 @@ const GatherSection: React.FC = () => {
             </div>
             <p className="text-wedding-brown/80 text-base md:text-lg leading-snug">
               {GROOM_EVENT_LOCATION}
+            </p>
+          </div>
+
+          {/* Bride Section */}
+          <div className="bride-section space-y-3">
+            <h3 className="text-wedding-brown text-2xl md:text-3xl font-bold tracking-wide">
+              {BRIDE_PARENTS_TITLE}
+            </h3>
+            <div className="space-y-1">
+              <p className="text-wedding-brown text-lg md:text-xl">
+                {BRIDE_FATHER_NAME}
+              </p>
+              <p className="text-wedding-brown text-lg md:text-xl">
+                {BRIDE_MOTHER_NAME}
+              </p>
+            </div>
+            <p className="text-wedding-brown/80 text-base md:text-lg leading-snug">
+              {BRIDE_EVENT_LOCATION}
             </p>
           </div>
         </div>

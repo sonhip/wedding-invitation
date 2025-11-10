@@ -17,6 +17,7 @@ import {
   EVENT_INVITATION_HIGHLIGHT,
   EVENT_INVITATION_FOOTER,
   BRIDE_EVENT_MAP_LINK,
+  GROOM_EVENT_MAP_LINK,
 } from "@/config/const";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -132,7 +133,7 @@ const EventSection: React.FC = () => {
 
         <div className="event-animate">
           <button
-            onClick={() => window.open(BRIDE_EVENT_MAP_LINK, "_blank")}
+            onClick={() => window.open(GROOM_EVENT_MAP_LINK, "_blank")}
             className="px-4 sm:px-6 py-2 bg-wedding-brown text-white text-base sm:text-lg font-semibold rounded-lg hover:bg-wedding-brown/90 transition-colors"
           >
             Hướng dẫn đi

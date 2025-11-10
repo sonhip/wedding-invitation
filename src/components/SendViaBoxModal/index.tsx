@@ -36,26 +36,6 @@ const SendViaBoxModal: React.FC = () => {
         </DialogHeader>
 
         <div className="mt-4 sm:mt-6 space-y-4 sm:space-y-6">
-          {/* Box Cô Dâu */}
-          <div className="border border-wedding-brown/20 bg-white p-3 sm:p-4 rounded-lg shadow-md">
-            <h3 className="text-center text-lg sm:text-xl font-semibold text-wedding-brown mb-3 sm:mb-4">
-              {BRIDE_GIFT_TITLE}
-            </h3>
-            <img
-              src={BRIDE_GIFT_QR_CODE}
-              alt="Cô Dâu"
-              className="w-full max-w-[280px] sm:max-w-sm mx-auto h-auto object-contain mb-3 sm:mb-4 rounded-lg"
-            />
-            <p className="text-center text-wedding-brown/80 text-sm sm:text-base">
-              <span className="font-medium">Ngân hàng:</span>{" "}
-              {BRIDE_GIFT_BANK_NAME} <br />
-              <span className="font-medium">Tên:</span>{" "}
-              {BRIDE_GIFT_ACCOUNT_NAME} <br />
-              <span className="font-medium">STK:</span>{" "}
-              {BRIDE_GIFT_ACCOUNT_NUMBER}
-            </p>
-          </div>
-
           {/* Box Chú Rể */}
           <div className="border border-wedding-brown/20 bg-white p-3 sm:p-4 rounded-lg shadow-md">
             <h3 className="text-center text-lg sm:text-xl font-semibold text-wedding-brown mb-3 sm:mb-4">
@@ -73,6 +53,26 @@ const SendViaBoxModal: React.FC = () => {
               {GROOM_GIFT_ACCOUNT_NAME} <br />
               <span className="font-medium">STK:</span>{" "}
               {GROOM_GIFT_ACCOUNT_NUMBER}
+            </p>
+          </div>
+
+          {/* Box Cô Dâu */}
+          <div className="border border-wedding-brown/20 bg-white p-3 sm:p-4 rounded-lg shadow-md">
+            <h3 className="text-center text-lg sm:text-xl font-semibold text-wedding-brown mb-3 sm:mb-4">
+              {BRIDE_GIFT_TITLE}
+            </h3>
+            <img
+              src={BRIDE_GIFT_QR_CODE}
+              alt="Cô Dâu"
+              className="w-full max-w-[280px] sm:max-w-sm mx-auto h-auto object-contain mb-3 sm:mb-4 rounded-lg"
+            />
+            <p className="text-center text-wedding-brown/80 text-sm sm:text-base">
+              <span className="font-medium">Ngân hàng:</span>{" "}
+              {BRIDE_GIFT_BANK_NAME} <br />
+              <span className="font-medium">Tên:</span>{" "}
+              {BRIDE_GIFT_ACCOUNT_NAME} <br />
+              <span className="font-medium">STK:</span>{" "}
+              {BRIDE_GIFT_ACCOUNT_NUMBER}
             </p>
           </div>
         </div>
