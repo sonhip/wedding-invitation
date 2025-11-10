@@ -2,7 +2,6 @@ import Carousel from "./components/Carousel";
 import FallingSnows from "./components/FallingSnows";
 import MusicToggleIcon from "./components/MusicToggleIcon";
 import { Toaster } from "./components/ui/toaster";
-import AboutUsSection from "./pages/about-us-section";
 import CountDownSection from "./pages/count-down-section";
 import EventDetailsSection from "./pages/event-details-section";
 import FooterSection from "./pages/footer-section";
@@ -17,7 +16,6 @@ function App() {
       <FallingSnows>
         <HeroSection />
         <PeopleSection />
-        {/* <AboutUsSection /> */}
         <EventDetailsSection />
         <Carousel />
         <CountDownSection />
