@@ -2,34 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/tym.png" />
+    <link rel="icon" type="image/png" href="/tym.png" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <title>Mạnh Thắng & Thanh Thư Wedding</title>
 
-    <!-- Tiêu đề của trang khi chia sẻ -->
+    <!-- 🔹 Open Graph (ảnh preview khi chia sẻ) -->
     <meta property="og:title" content="Mạnh Thắng & Thanh Thư Wedding" />
-
-    <!-- Mô tả ngắn về nội dung trang web -->
     <meta
       property="og:description"
       content="Cùng tham dự cưới chúng mình nha!"
     />
-
-    <!-- Địa chỉ URL của ảnh preview -->
-    <meta property="og:image" content="/preview.png" />
-
-    <!-- Các thẻ Open Graph khác -->
-    <meta property="og:url" content="/preview.png" />
+    <meta
+      property="og:image"
+      content="https://manhthang-thanhthu.vercel.app/preview.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://manhthang-thanhthu.vercel.app/" />
 
-    <!-- Các thẻ bổ sung khác cho SEO -->
+    <!-- 🔹 Twitter Card (hiển thị đẹp trên Messenger, Zalo, X) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mạnh Thắng & Thanh Thư Wedding" />
+    <meta
+      name="twitter:description"
+      content="Cùng tham dự cưới chúng mình nha!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://manhthang-thanhthu.vercel.app/preview.png"
+    />
+
+    <!-- 🔹 SEO cơ bản -->
     <meta name="description" content="Mạnh Thắng & Thanh Thư Wedding" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/tym.png" />
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
