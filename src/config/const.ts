@@ -84,7 +84,7 @@ export const EVENT_SECTION_DESCRIPTION =
 
 // Event details constants
 export const EVENT_CEREMONY_TITLE = "HÔN LỄ ĐƯỢC TỔ CHỨC VÀO LÚC";
-export const EVENT_TIME = "10 GIỜ 40";
+export const EVENT_TIME = "09 GIỜ 00";
 export const EVENT_DATE_DAY = "30";
 export const EVENT_DATE_MONTH = "11";
 export const EVENT_DATE_YEAR = "25";
@@ -139,7 +139,7 @@ export const GALLERY_IMAGES = [
   "/images/gray-xy3.jpg",
   "/images/gray-xy4.jpg",
   "/images/pink-xy1.jpg",
-  "/images/pink-xy2.jpg",
+  "/images/pink-xy8.jpg",
   "/images/pink-xy6.jpg",
   "/images/pink-xy4.jpg",
   "/images/red-xy1.jpg",
