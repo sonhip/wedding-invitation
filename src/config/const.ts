@@ -46,7 +46,7 @@ export const BRIDE_IMAGE = "/images/white-x.jpg";
 export const GROOM_IMAGE = "/images/white-y.jpg";
 
 // Thông tin invitation section
-export const INVITATION_TITLE = "THƯ MỜI THAM DỰ LỄ CƯỚI";
+export const INVITATION_TITLE = "THIỆP MỜI THAM DỰ LỄ CƯỚI";
 export const INVITATION_SUBTITLE =
   "Trân trọng kính mời đến dự lễ cưới của chúng tôi";
 export const INVITATION_STORY =
@@ -76,7 +76,7 @@ export const GROOM_PARENTS_TITLE = "NHÀ TRAI";
 export const GROOM_FATHER_NAME = "ÔNG: NGUYỄN ĐỨC KHẮC (cố phụ)";
 export const GROOM_MOTHER_NAME = "BÀ: TRẦN THỊ ANH";
 export const GROOM_EVENT_LOCATION =
-  "Thôn Chè, Xã Liên Bão, Huyện Thái Thuỵ, Tỉnh Thái Bình";
+  "Thôn Chè, Xã Liên Bão, Huyện Tiên Du, Tỉnh Bắc Ninh";
 
 // Legacy constants (giữ lại để không break code cũ)
 export const EVENT_SECTION_DESCRIPTION =
