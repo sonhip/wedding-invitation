@@ -10,7 +10,7 @@ export const useQueryParams = () => {
     const queryParams: Record<string, string> = {};
 
     params.forEach((value, key) => {
-      queryParams[key] = value;
+      queryParams[key] = decodeURIComponent(value);
     });
 
     return queryParams;
