@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
+import { WEDDING_DATE } from "@/config/const";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,44 +24,64 @@ const Calendar = () => {
     );
   }, []);
 
-  // November 2025 calendar data
-  const daysInMonth = [
-    { day: "", week: 0 }, // Empty cells for alignment
-    { day: "", week: 0 },
-    { day: "", week: 0 },
-    { day: "", week: 0 },
-    { day: "", week: 0 },
-    { day: 1, week: 0 },
-    { day: 2, week: 0 },
-    { day: 3, week: 1 },
-    { day: 4, week: 1 },
-    { day: 5, week: 1 },
-    { day: 6, week: 1 },
-    { day: 7, week: 1 },
-    { day: 8, week: 1 },
-    { day: 9, week: 1 },
-    { day: 10, week: 2 },
-    { day: 11, week: 2 },
-    { day: 12, week: 2 },
-    { day: 13, week: 2 },
-    { day: 14, week: 2 },
-    { day: 15, week: 2 },
-    { day: 16, week: 2 },
-    { day: 17, week: 3 },
-    { day: 18, week: 3 },
-    { day: 19, week: 3 },
-    { day: 20, week: 3 },
-    { day: 21, week: 3 },
-    { day: 22, week: 3 },
-    { day: 23, week: 3 },
-    { day: 24, week: 4 },
-    { day: 25, week: 4 },
-    { day: 26, week: 4 },
-    { day: 27, week: 4 },
-    { day: 28, week: 4 },
-    { day: 29, week: 4 },
-    { day: 30, week: 4, highlight: true },
-  ];
+  // Parse WEDDING_DATE (format: DD/MM/YYYY)
+  const { weddingDay, weddingMonth, weddingYear, monthName } = useMemo(() => {
+    const [day, month, year] = WEDDING_DATE.split("/").map(Number);
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    return {
+      weddingDay: day,
+      weddingMonth: month,
+      weddingYear: year,
+      monthName: monthNames[month - 1],
+    };
+  }, []);
+
+  // Generate calendar data dynamically
+  const daysInMonth = useMemo(() => {
+    // Get first day of the month (0 = Sunday, 1 = Monday, etc.)
+    const firstDayOfMonth = new Date(weddingYear, weddingMonth - 1, 1).getDay();
+    // Get total days in the month
+    const totalDays = new Date(weddingYear, weddingMonth, 0).getDate();
+
+    // Adjust for Monday start (0 = Monday, 6 = Sunday)
+    const startOffset = firstDayOfMonth === 0 ? 6 : firstDayOfMonth - 1;
+
+    const calendar: Array<{
+      day: number | string;
+      week: number;
+      highlight?: boolean;
+    }> = [];
+
+    // Add empty cells for days before the first day of the month
+    for (let i = 0; i < startOffset; i++) {
+      calendar.push({ day: "", week: 0 });
+    }
+
+    // Add all days of the month
+    for (let day = 1; day <= totalDays; day++) {
+      const weekNumber = Math.floor(calendar.length / 7);
+      calendar.push({
+        day,
+        week: weekNumber,
+        highlight: day === weddingDay,
+      });
+    }
+
+    return calendar;
+  }, [weddingDay, weddingMonth, weddingYear]);
 
   return (
     <section className="calendar-section mt-8 relative py-16 md:py-24 bg-wedding-brown overflow-hidden">
@@ -80,7 +101,7 @@ const Calendar = () => {
         {/* Calendar Title */}
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-white text-5xl md:text-6xl lg:text-7xl font-serif italic mb-2">
-            November <span className="font-normal">2025</span>
+            {monthName} <span className="font-normal">{weddingYear}</span>
           </h2>
         </div>
 
